@@ -145,6 +145,8 @@ h1 {
   font-size: 0.7rem;
   font-weight: 500;
   margin-bottom: 4px;
+  position: relative;
+  z-index: 1;
 }
 
 .card {
@@ -227,12 +229,11 @@ h1 {
 }
 
 .timeline-year {
-  position: absolute;
-  left: 35px;
-  top: 0;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--accent);
+  display: none !important; /* Hide this as it's redundant with the .date element */
+  position: absolute !important; /* Ensure it doesn't take up space */
+  visibility: hidden !important; /* Extra protection to hide it */
+  opacity: 0 !important; /* Make it transparent as well */
+  pointer-events: none !important; /* Prevent interaction */
 }
 
 /* Filters */
@@ -429,9 +430,7 @@ footer {
     left: 16px;
   }
   
-  .timeline-year {
-    left: 30px;
-  }
+  /* Timeline year is hidden */
 }
 
 /* Print */

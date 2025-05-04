@@ -14,6 +14,10 @@
         .timeline-container{opacity:1;will-change:transform}
         .era-btn{background:rgba(255,255,255,.1);border:none;padding:8px 12px;border-radius:4px;color:#f8f9fa;font-size:.85rem;margin:3px;cursor:pointer}
         .era-btn.active{background:#f8f9fa;color:#6b46c1}
+        ul li{margin-bottom:5px}
+        #llm-themes .timeline-item{padding-left:45px}
+        #llm-themes .timeline-content{margin-left:10px}
+        .timeline-item ul{list-style-type:disc;padding-left:10px}
         @media (prefers-color-scheme:light){body{background:#f9f9f9;color:#333}}
     </style>
     <!-- Google Fonts - Inter -->
@@ -24,8 +28,8 @@
 <body>
     <header>
         <div class="container">
-            <h1>The Evolution of Artificial Intelligence</h1>
-            <p class="subtitle">A comprehensive timeline of breakthroughs and developments from foundations to modern AI</p>
+            <h1>The Evolution of Artificial Intelligence (1642-2075)</h1>
+            <p class="subtitle">A comprehensive timeline from mathematical foundations to LLMs and projected future developments</p>
             
             <div class="era-nav">
                 <button class="era-btn active" data-era="all">All</button>
@@ -37,6 +41,7 @@
                 <button class="era-btn" data-era="data-hardware">Data/Hardware</button>
                 <button class="era-btn" data-era="nlp">NLP</button>
                 <button class="era-btn" data-era="transformers">Transformers</button>
+                <button class="era-btn" data-era="llm-themes">2020-2025 LLMs</button>
             </div>
         </div>
     </header>
@@ -58,7 +63,7 @@
             <div class="timeline-container">
                 <div class="timeline-item" data-category="logic">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1854</span>
+                    <!-- Removed duplicate year display -->
                     <div class="timeline-content">
                         <span class="date">1854</span>
                         <div class="card">
@@ -72,7 +77,6 @@
 
                 <div class="timeline-item" data-category="logic">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1879</span>
                     <div class="timeline-content">
                         <span class="date">1879</span>
                         <div class="card">
@@ -86,8 +90,7 @@
 
                 <div class="timeline-item" data-category="logic">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1910-1913</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1910-1913</span>
                         <div class="card">
                             <h3>Principia Mathematica</h3>
@@ -100,8 +103,7 @@
 
                 <div class="timeline-item" data-category="probability">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1642-1679</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1642-1679</span>
                         <div class="card">
                             <h3>Early Computation and Binary Logic</h3>
@@ -114,8 +116,7 @@
                 
                 <div class="timeline-item" data-category="probability">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">17th-18th Century</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">17th-18th Century</span>
                         <div class="card">
                             <h3>Probability Theory</h3>
@@ -128,8 +129,7 @@
 
                 <div class="timeline-item" data-category="calculus">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">Late 17th Century</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">Late 17th Century</span>
                         <div class="card">
                             <h3>Calculus</h3>
@@ -142,8 +142,7 @@
 
                 <div class="timeline-item" data-category="algebra">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">Mid-19th Century</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">Mid-19th Century</span>
                         <div class="card">
                             <h3>Matrix Algebra</h3>
@@ -164,8 +163,7 @@
             <div class="timeline-container">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1928</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1928</span>
                         <div class="card">
                             <h3>Hilbert's Entscheidungsproblem</h3>
@@ -178,8 +176,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1931</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1931</span>
                         <div class="card">
                             <h3>Gödel's Incompleteness Theorems</h3>
@@ -192,8 +189,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1936</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1936</span>
                         <div class="card">
                             <h3>Church's Lambda Calculus</h3>
@@ -206,8 +202,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1936</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1936</span>
                         <div class="card">
                             <h3>Turing Machine & The Halting Problem</h3>
@@ -220,8 +215,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1936-1937</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1936-1937</span>
                         <div class="card">
                             <h3>Church-Turing Thesis</h3>
@@ -234,8 +228,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1943</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1943</span>
                         <div class="card">
                             <h3>McCulloch-Pitts Neuron</h3>
@@ -248,8 +241,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1945</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1945</span>
                         <div class="card">
                             <h3>Von Neumann Architecture</h3>
@@ -262,8 +254,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1948</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1948</span>
                         <div class="card">
                             <h3>Information Theory</h3>
@@ -276,8 +267,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1949</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1949</span>
                         <div class="card">
                             <h3>Hebbian Learning</h3>
@@ -298,8 +288,7 @@
             <div class="timeline-container">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1950</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1950</span>
                         <div class="card">
                             <h3>The Turing Test</h3>
@@ -312,8 +301,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1956</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1956</span>
                         <div class="card">
                             <h3>Dartmouth Workshop and Birth of "Artificial Intelligence"</h3>
@@ -326,8 +314,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1956</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1956</span>
                         <div class="card">
                             <h3>Logic Theorist</h3>
@@ -340,8 +327,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1957</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1957</span>
                         <div class="card">
                             <h3>General Problem Solver (GPS)</h3>
@@ -354,8 +340,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1957-1960</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1957-1960</span>
                         <div class="card">
                             <h3>The Perceptron</h3>
@@ -368,8 +353,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1958</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1958</span>
                         <div class="card">
                             <h3>LISP and Symbolic Processing</h3>
@@ -382,8 +366,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1959</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1959</span>
                         <div class="card">
                             <h3>Machine Learning and Self-Teaching Programs</h3>
@@ -396,8 +379,7 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1959</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1959</span>
                         <div class="card">
                             <h3>Physical Symbol System Hypothesis</h3>
@@ -418,8 +400,7 @@
             <div class="timeline-container">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1969</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1969</span>
                         <div class="card">
                             <h3>"Perceptrons" Book</h3>
@@ -432,8 +413,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1966-1973</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1966-1973</span>
                         <div class="card">
                             <h3>Critical Reports</h3>
@@ -446,8 +426,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1970s-1980s</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1970s-1980s</span>
                         <div class="card">
                             <h3>First AI Winter</h3>
@@ -459,8 +438,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1980s</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1980s</span>
                         <div class="card">
                             <h3>Expert Systems</h3>
@@ -473,8 +451,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1980</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1980</span>
                         <div class="card">
                             <h3>Neocognitron</h3>
@@ -487,8 +464,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1987-1990s</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1987-1990s</span>
                         <div class="card">
                             <h3>Second AI Winter</h3>
@@ -508,8 +484,7 @@
             <div class="timeline-container">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1986</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1986</span>
                         <div class="card">
                             <h3>Backpropagation and Deep Learning Foundations</h3>
@@ -522,8 +497,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1989/1998</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1989/1998</span>
                         <div class="card">
                             <h3>LeNet-5</h3>
@@ -536,8 +510,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1995</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1995</span>
                         <div class="card">
                             <h3>Support Vector Machines</h3>
@@ -550,8 +523,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1997</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1997</span>
                         <div class="card">
                             <h3>LSTM (Long Short-Term Memory)</h3>
@@ -564,8 +536,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2006</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">2006</span>
                         <div class="card">
                             <h3>Deep Learning Revival</h3>
@@ -586,8 +557,7 @@
             <div class="timeline-container">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1998</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1998</span>
                         <div class="card">
                             <h3>MNIST Dataset</h3>
@@ -600,8 +570,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2007</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">2007</span>
                         <div class="card">
                             <h3>CUDA</h3>
@@ -614,8 +583,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2009</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">2009</span>
                         <div class="card">
                             <h3>ImageNet</h3>
@@ -628,8 +596,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2012</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">2012</span>
                         <div class="card">
                             <h3>AlexNet</h3>
@@ -642,8 +609,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2012-2015</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">2012-2015</span>
                         <div class="card">
                             <h3>Deep Learning Frameworks</h3>
@@ -664,8 +630,7 @@
             <div class="timeline-container">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1990s</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">1990s</span>
                         <div class="card">
                             <h3>Statistical NLP</h3>
@@ -678,8 +643,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2003</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">2003</span>
                         <div class="card">
                             <h3>Neural Language Models</h3>
@@ -692,8 +656,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2013</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">2013</span>
                         <div class="card">
                             <h3>Word2Vec</h3>
@@ -706,8 +669,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2014</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">2014</span>
                         <div class="card">
                             <h3>Seq2Seq Models</h3>
@@ -720,8 +682,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2014</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">2014</span>
                         <div class="card">
                             <h3>Attention Mechanism</h3>
@@ -742,8 +703,7 @@
             <div class="timeline-container">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2017</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">2017</span>
                         <div class="card">
                             <h3>Transformer Architecture</h3>
@@ -756,8 +716,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2018</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">2018</span>
                         <div class="card">
                             <h3>Pretrained Language Models (ELMo, BERT, GPT)</h3>
@@ -770,8 +729,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2019</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">2019</span>
                         <div class="card">
                             <h3>Scaling Parameters and Data (GPT-2, Megatron, T5)</h3>
@@ -784,8 +742,7 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2020</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">2020</span>
                         <div class="card">
                             <h3>GPT-3 and the 100+ Billion Parameter Frontier</h3>
@@ -798,8 +755,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2021</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">2021</span>
                         <div class="card">
                             <h3>Model Scaling and Multimodality</h3>
@@ -812,8 +768,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2022</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">2022</span>
                         <div class="card">
                             <h3>Instruction Tuning and Alignment (RLHF)</h3>
@@ -826,8 +781,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">Late 2022</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">Late 2022</span>
                         <div class="card">
                             <h3>ChatGPT and Public Adoption</h3>
@@ -840,8 +794,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">March 2023</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">March 2023</span>
                         <div class="card">
                             <h3>GPT-4 (Multimodal and Advanced Reasoning)</h3>
@@ -854,8 +807,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">Feb-July 2023</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">Feb-July 2023</span>
                         <div class="card">
                             <h3>Open-Source LLM Revolution</h3>
@@ -868,8 +820,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2023</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">2023</span>
                         <div class="card">
                             <h3>Claude and Other Industrial-Scale Models</h3>
@@ -882,8 +833,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2023-2024</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
                         <span class="date">2023-2024</span>
                         <div class="card">
                             <h3>Tool Use and Multimodal Integration</h3>
@@ -896,14 +846,220 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2025</span>
-                    <div class="timeline-content">
+                                        <div class="timeline-content">
+                        <span class="date">2020 (Jun)</span>
+                        <div class="card">
+                            <h3>GPT-3: Few-Shot Learning Breakthrough</h3>
+                            <p>OpenAI's GPT-3, a 175 billion parameter model, demonstrated unprecedented few-shot learning abilities. By merely providing a few examples in the prompt, GPT-3 could perform tasks without traditional fine-tuning, reframing language models as general task interfaces. This marked a paradigm shift in AI versatility.</p>
+                            <p class="key-figures">Key Organization: OpenAI</p>
+                            <p class="significance">GPT-3 showed that scaling parameters led to emergent abilities not present in smaller models. Its ability to complete tasks from simple instructions sparked the current wave of LLM development and revolutionized how we interact with AI systems, setting the stage for models that can learn from context alone.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                        <span class="date">2020-2021</span>
+                        <div class="card">
+                            <h3>Sparsity Revolution: Mixture of Experts</h3>
+                            <p>Google's GShard (2020) and Switch Transformer (2021) pioneered sparse mixture-of-experts (MoE) architectures. Switch Transformer scaled to 1.6 trillion parameters with 64 experts, while only using a fraction of parameters for each input. This approach dramatically improved parameter efficiency by activating only relevant "expert" neural networks for each token.</p>
+                            <p class="key-figures">Key Organization: Google Research</p>
+                            <p class="significance">MoE architectures revolutionized scaling by allowing models to grow to trillions of parameters without proportional computation costs. This technique would later enable models like Mixtral 8×7B, Gemini 1.5, and other systems that offer remarkable capabilities with practical computational requirements.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                        <span class="date">2021</span>
+                        <div class="card">
+                            <h3>Multimodal Breakthroughs: DALL-E and CLIP</h3>
+                            <p>OpenAI released two groundbreaking multimodal systems in early 2021: DALL-E, which generated images from text descriptions using a discrete VAE approach, and CLIP, which learned powerful visual concepts from natural language supervision. These systems demonstrated new connections between language and visual understanding.</p>
+                            <p class="key-figures">Key Organization: OpenAI</p>
+                            <p class="significance">DALL-E and CLIP began bridging the gap between language and vision, paving the way for multimodal AI systems. CLIP's joint text-image embeddings became a foundation for many subsequent AI image generation and understanding systems, while DALL-E sparked the text-to-image generation revolution.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                        <span class="date">2022</span>
+                        <div class="card">
+                            <h3>Scaling Laws and Mass Adoption</h3>
+                            <p>2022 saw crucial advances in scaling theory, accessibility, and public adoption. DeepMind's Chinchilla research revealed most models were undertrained, showing optimal performance requires 20× more tokens than parameters. Meanwhile, Stable Diffusion democratized text-to-image generation with open weights, while ChatGPT brought conversational AI to 100M users within two months of launch.</p>
+                            <p class="key-figures">Key Organizations: DeepMind, Stability AI, OpenAI</p>
+                            <p class="significance">The Chinchilla paper fundamentally changed how large models are trained, prioritizing data over size. LoRA adaptation techniques made fine-tuning accessible on consumer hardware. ChatGPT's explosive adoption marked AI's mainstream breakthrough moment, while open-source releases began democratizing access to cutting-edge AI capabilities.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                        <span class="date">2023 (Q1-Q2)</span>
+                        <div class="card">
+                            <h3>Open Source Revolution and GPT-4</h3>
+                            <p>Meta AI's release of LLaMA in February 2023 ignited an open-source LLM movement. After weights leaked, projects like Stanford Alpaca showed ChatGPT-like capabilities could be reproduced for $600. Meanwhile, OpenAI launched GPT-4 with multimodal capabilities and superior reasoning, while AutoGPT demonstrated autonomous agent capabilities using GPT-4 as its reasoning engine.</p>
+                            <p class="key-figures">Key Organizations: Meta AI, Stanford, OpenAI</p>
+                            <p class="significance">LLaMA and its derivatives democratized access to powerful language models, enabling innovation outside major AI labs. GPT-4's improved reasoning and safety reflected increasingly sophisticated alignment techniques, while AutoGPT (gaining 140,000 GitHub stars in a month) pioneered autonomous AI agents with goal-directed behavior.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                        <span class="date">2023 (Q3-Q4)</span>
+                        <div class="card">
+                            <h3>Performance Breakthroughs and AI Governance</h3>
+                            <p>Technical innovations accelerated in late 2023 with FlashAttention-2 making attention linear in sequence length, and Mixtral 8×7B proving open MoE architectures could outperform dense models with fewer active parameters. Meanwhile, the Bletchley Park Summit brought 28 nations together to sign the first multilateral frontier AI safety declaration, marking a watershed in global AI governance.</p>
+                            <p class="key-figures">Key Organizations: Tri Dao (Stanford), Mistral AI, UK Government</p>
+                            <p class="significance">FlashAttention-2 enabled the million-token context windows that would follow in 2024. Mixtral demonstrated MoE techniques could deliver flagship performance in open models. The Bletchley Declaration represented the first major international agreement on AI safety, establishing a framework for international AI governance as capabilities rapidly advanced.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                        <span class="date">2024</span>
+                        <div class="card">
+                            <h3>Million-Token Context and Training Innovation</h3>
+                            <p>2024 brought dramatic advances in context length and training efficiency. Google's Gemini 1.5 Pro and Anthropic's Claude 3 both achieved million-token context windows, enabling processing of entire books, codebases, or conversations. Training paradigms evolved with Direct Preference Optimization (DPO) replacing complex RLHF with a more efficient approach, cutting alignment compute by 5×.</p>
+                            <p class="key-figures">Key Organizations: Google, Anthropic, UC Berkeley</p>
+                            <p class="significance">Million-token context windows transformed LLM utility, enabling document analysis, code understanding, and long-term memory. DPO and similar techniques made alignment more mathematically principled and efficient. Meanwhile, state-space models like Mamba offered linear-complexity alternatives to Transformers, while specialized models like Microsoft's Phi-3 demonstrated remarkable capabilities at mobile-friendly sizes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
                         <span class="date">2025</span>
                         <div class="card">
-                            <h3>Advanced Models with Step-by-Step Reasoning</h3>
-                            <p>By early 2025, new capabilities were emerging in models like Alibaba's Qwen-3 (released April 2025). This family of models, ranging from 0.6B to a flagship 235B parameters, introduced hybrid capabilities like automatic "deliberation" – the ability to internally chain thoughts to improve reasoning when faced with difficult problems. These models demonstrated continued scaling benefits with 36 trillion tokens of training data across 119 languages.</p>
-                            <p class="key-figures">Key Organizations: Alibaba, Google, OpenAI, Anthropic</p>
-                            <p class="significance">These advanced models incorporated ideas like self-refinement and step-by-step thinking directly into their architecture. By automating the deliberative reasoning process, they achieved better results on complex problems while maintaining the convenience of a single-query interface. The industry continued to see healthy competition between open and closed models, pushing forward both capabilities and accessibility.</p>
+                            <h3>Open Source Parity and AI Regulation</h3>
+                            <p>By May 2025, open-source models achieved capability parity with commercial systems. DeepSeek-R1 released GPT-4-level weights trained with RL-reasoning, while Meta's Llama 4 introduced a 1 trillion parameter MoE model with 128k context. The EU Parliament approved the landmark AI Act, establishing tiered regulation for foundation models with mandatory risk disclosures and mitigation for frontier systems.</p>
+                            <p class="key-figures">Key Organizations: DeepSeek, Meta AI, European Union</p>
+                            <p class="significance">The open-source frontier caught up to commercial systems, while specialized agents like Devin demonstrated autonomous software engineering capabilities. The EU AI Act became the world's first comprehensive AI regulation, establishing a framework for responsible development as models reached human-expert level on increasingly complex tasks, particularly in coding and mathematics domains.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thematic LLM Section -->
+        <section id="llm-themes" class="era-section">
+            <h2 class="era-title">LLM Breakthroughs by Theme (2020-2025)</h2>
+            <p class="era-description">Key developments organized by technological category rather than chronology</p>
+
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                        <span class="date">Architecture & Scaling</span>
+                        <div class="card">
+                            <h3>From Dense to Sparse Architectures</h3>
+                            <p>The period from 2020-2025 saw dramatic shifts in model architecture, moving from purely dense Transformers to sparse Mixture-of-Experts (MoE) and alternative linear-complexity approaches. Key innovations included:</p>
+                            <ul style="margin-left: 20px; margin-bottom: 15px;">
+                                <li>Sparse MoE systems (GShard, Switch Transformer, Mixtral) enabling 10-100× parameter growth at only 1-2× computational cost</li>
+                                <li>FlashAttention and other memory-efficient attention implementations enabling million-token context windows</li>
+                                <li>State-space models like Mamba and recurrent approaches like RWKV offering O(n) memory scaling for infinite context</li>
+                                <li>Chinchilla scaling laws shifting focus to data quality over model size</li>
+                            </ul>
+                            <p class="significance">These architectural advances enabled more efficient training, longer contexts, and specialized processing. By 2025, hybrid architectures combining sparse MoE, efficient attention, and streaming inference had become standard for flagship models.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                        <span class="date">Multimodal & Embodiment</span>
+                        <div class="card">
+                            <h3>Breaking the Text Barrier</h3>
+                            <p>2020-2025 witnessed AI systems expanding beyond text to encompass multiple modalities. Early multimodal systems like DALL-E and CLIP evolved into fully integrated vision-language models. Key developments included:</p>
+                            <ul style="margin-left: 20px; margin-bottom: 15px;">
+                                <li>LLaVA, GPT-4V, and Gemini enabling natural conversations about images</li>
+                                <li>PaLM-E directly integrating robot sensor data into the language model token stream</li>
+                                <li>RT-2 demonstrating zero-shot transfer from vision-language training to physical robot control</li>
+                                <li>DALL-E 3, Midjourney V5, and Sora advancing photorealistic image and video generation</li>
+                            </ul>
+                            <p class="significance">By 2025, the line between modalities had blurred significantly, with models processing text, images, audio, and physical sensor data through unified architectures. This enabled more natural human-AI interaction and applications in robotics, creative fields, and scientific visualization.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                        <span class="date">Training & Alignment</span>
+                        <div class="card">
+                            <h3>Beyond Pretraining & RLHF</h3>
+                            <p>Training methodologies evolved substantially between 2020-2025, with more efficient alignment techniques and novel data approaches. Notable advances included:</p>
+                            <ul style="margin-left: 20px; margin-bottom: 15px;">
+                                <li>Synthetic instruction tuning (Alpaca, Vicuna) democratizing alignment by distilling capabilities from larger models</li>
+                                <li>Direct Preference Optimization (DPO) providing a mathematically principled alternative to complex RLHF pipelines</li>
+                                <li>Constitutional AI using iterative self-critique with written principles to guide model behavior</li>
+                                <li>Self-Instruct and quality-focused data curation showing data quality often matters more than quantity</li>
+                            </ul>
+                            <p class="significance">These training innovations dramatically reduced the cost of alignment while improving model behavior. By 2025, powerful models could be aligned on consumer hardware for hundreds of dollars, while flagship systems integrated multiple training methodologies for balanced capabilities.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                        <span class="date">Compression & Deployment</span>
+                        <div class="card">
+                            <h3>AI on Every Device</h3>
+                            <p>Deployment techniques evolved to bring powerful AI to consumer hardware. Major advances included:</p>
+                            <ul style="margin-left: 20px; margin-bottom: 15px;">
+                                <li>4-bit quantization (GPTQ, GGUF) reducing VRAM requirements by 75% with minimal quality loss</li>
+                                <li>LoRA and QLoRA enabling fine-tuning of 65B models on consumer GPUs for under $600</li>
+                                <li>Activation-aware quantization (SmoothQuant) halving memory bandwidth requirements</li>
+                                <li>Specialized small models like Phi-3 delivering impressive capabilities at just 3.8B parameters</li>
+                            </ul>
+                            <p class="significance">These techniques democratized access to AI, bringing GPT-4-class capabilities to laptops and even mobile devices. By 2025, all major phone manufacturers had integrated on-device LLMs, while consumer GPUs could run 70B parameter models with sub-second latency.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                        <span class="date">Agent Frameworks & Autonomy</span>
+                        <div class="card">
+                            <h3>From Models to Agentic Systems</h3>
+                            <p>The evolution from passive models to autonomous agents accelerated between 2020-2025. Key developments included:</p>
+                            <ul style="margin-left: 20px; margin-bottom: 15px;">
+                                <li>AutoGPT pioneering autonomous goal-directed planning and self-critique loops</li>
+                                <li>Reflexion adding metacognitive capabilities for error-driven self-improvement</li>
+                                <li>Devin and Claude Code demonstrating end-to-end software engineering capabilities</li>
+                                <li>Function-calling APIs and frameworks like LangChain standardizing tool use integration</li>
+                            </ul>
+                            <p class="significance">By 2025, agentic systems could reliably plan, execute, and revise multi-step tasks with minimal human intervention. These capabilities enabled major productivity gains in knowledge work, software development, and research, while raising new questions about responsible autonomy and oversight.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                                        <div class="timeline-content">
+                        <span class="date">Safety & Governance</span>
+                        <div class="card">
+                            <h3>Formalizing AI Oversight</h3>
+                            <p>As AI capabilities grew, governance frameworks evolved in parallel. Major developments included:</p>
+                            <ul style="margin-left: 20px; margin-bottom: 15px;">
+                                <li>The EU AI Act establishing tiered regulation for AI systems based on risk levels</li>
+                                <li>The Bletchley Declaration bringing 28 nations together for frontier AI safety coordination</li>
+                                <li>Systematic evaluation frameworks like ARC Evals for dangerous capabilities assessment</li>
+                                <li>The UN AI Advisory Body creating global coordination mechanisms for AI governance</li>
+                            </ul>
+                            <p class="significance">The 2020-2025 period saw AI governance mature from voluntary guidelines to binding regulations and international frameworks. These mechanisms aimed to ensure powerful AI systems remained beneficial, safe, and aligned with human values as capabilities continued their rapid advance.</p>
                         </div>
                     </div>
                 </div>
@@ -913,20 +1069,38 @@
         <!-- Future Section -->
         <section class="future-section">
             <div class="container">
-                <h2 class="future-title">The Future of AI</h2>
+                <h2 class="future-title">The Future of AI (2025-2075)</h2>
                 <div class="future-content">
-                    <p>Active research frontiers in AI include:</p>
+                    <h3 style="margin-bottom: 15px; color: #9f7aea;">Near-Term Outlook (2035)</h3>
                     <ul>
-                        <li><strong>Efficiency:</strong> Developing more parameter and computationally efficient architectures (mixture-of-experts, sparse transformers)</li>
-                        <li><strong>Reasoning:</strong> Enhancing logical and mathematical reasoning through techniques like chain-of-thought prompting and tools</li>
-                        <li><strong>Safety:</strong> Improving alignment with human values and developing robust techniques to prevent misuse</li>
-                        <li><strong>Interpretability:</strong> Understanding how models work internally and why they make specific decisions</li>
-                        <li><strong>Multimodal integration:</strong> Combining language with vision, audio, and other modalities for more holistic AI systems</li>
-                        <li><strong>Agents:</strong> Creating systems that can plan, act, and adapt autonomously across diverse environments</li>
-                        <li><strong>Robotics integration:</strong> Connecting language models to physical systems for embodied intelligence</li>
-                        <li><strong>Scientific discovery:</strong> Applying AI to fundamental problems in biology, chemistry, physics, and medicine</li>
+                        <li><strong>Trillion-token on-device assistants</strong> – Sparse and state-space models enabling virtually unlimited context with millisecond latency on ordinary hardware</li>
+                        <li><strong>Autonomous research agents</strong> – Systems that generate and test scientific hypotheses in simulation, potentially leading to Nobel-level discoveries</li>
+                        <li><strong>Verified-safe AI cores</strong> – Formal methods and automated interpretability ensuring bounded optimization in critical systems</li>
+                        <li><strong>Human-machine teams</strong> – AI handling routine tasks across professions while humans provide strategic direction</li>
+                        <li><strong>Unified governance layer</strong> – International frameworks similar to nuclear oversight for high-capability AI systems</li>
                     </ul>
-                    <p>As AI capabilities advance, society faces profound questions about ensuring equitable benefits while managing risks related to misuse, labor impacts, concentration of power, and long-term alignment with human values and goals.</p>
+                    
+                    <h3 style="margin: 20px 0 15px; color: #9f7aea;">Long-Term Trajectory (2075)</h3>
+                    <ul>
+                        <li><strong>Collective super-intelligence</strong> – Networked specialized AIs and augmented humans achieving gestalt cognition for civilization-scale projects</li>
+                        <li><strong>Post-scarcity economics</strong> – Marginal cost of knowledge and fabrication approaching zero, shifting societal focus to ethics and creativity</li>
+                        <li><strong>Brain-computer interfaces</strong> – Direct neural interaction with AI systems transforming education and cognitive enhancement</li>
+                        <li><strong>Digital continuity</strong> – Personal digital twins maintaining identity and relationships across biological limitations</li>
+                        <li><strong>Existential concern</strong> – Continuous oversight needed to prevent misaligned systems from racing past ethical guardrails</li>
+                    </ul>
+                    
+                    <h3 style="margin: 20px 0 15px; color: #9f7aea;">Open Research Frontiers (2025)</h3>
+                    <ul>
+                        <li><strong>Scalable interpretability</strong> – Automated circuit extraction for billion-parameter networks</li>
+                        <li><strong>Synthetic data feedback loops</strong> – Preventing distribution collapse when models train on their own outputs</li>
+                        <li><strong>Agent safety</strong> – Sandboxing and verifiable constraints for self-modifying agents</li>
+                        <li><strong>Energy sustainability</strong> – Addressing training compute requirements that rival small nations</li>
+                        <li><strong>Consciousness evaluation</strong> – Rigorous frameworks to assess potential machine sentience</li>
+                        <li><strong>Cross-cultural alignment</strong> – Ensuring AI systems respect diverse global values</li>
+                        <li><strong>Long-term reasoning</strong> – Enabling systems to consider consequences across decades and centuries</li>
+                    </ul>
+                    
+                    <p style="margin-top: 20px;">The 2020-2025 window compressed two decades of expected progress into five years. Architecture, data-generation and safety research now co-evolve in near-real-time with policy. Keeping that virtuous (and <strong>safe</strong>) feedback loop alive is the central technical and societal challenge for the coming decade.</p>
                 </div>
             </div>
         </section>
@@ -935,10 +1109,10 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>This timeline explores the mathematical concepts, theoretical breakthroughs, algorithmic innovations, hardware advancements, and data paradigms that enabled modern AI systems.</p>
+                <p>This timeline explores the mathematical concepts, theoretical breakthroughs, algorithmic innovations, hardware advancements, and data paradigms that enabled modern AI systems. The 2020-2025 sections feature comprehensive coverage of large language models, multimodal systems, and agentic AI developments.</p>
             </div>
             <div class="footer-copyright">
-                <p>© 2025 AI Timeline Project</p>
+                <p>© 2025 AI Timeline Project | Updated with detailed LLM developments through May 2025</p>
             </div>
         </div>
     </footer>

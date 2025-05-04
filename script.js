@@ -14,12 +14,34 @@
       });
     }
   };
+  
+  // Add function to hide any timeline-year elements that might still be visible
+  document.addEventListener('DOMContentLoaded', () => {
+    // Remove all timeline-year elements to prevent the duplicate year display
+    const timelineYears = document.querySelectorAll('.timeline-year');
+    timelineYears.forEach(year => {
+      year.remove(); // Completely remove from DOM instead of just hiding
+    });
+  });
+  
+  // Add llm-themes to era sections
+  document.addEventListener('DOMContentLoaded', () => {
+    const llmThemes = document.getElementById('llm-themes');
+    if (llmThemes) {
+      llmThemes.classList.add('era-section');
+    }
+  });
 
   // Performance optimizations
   onReady(() => {
     // Cache key DOM elements with one-time lookups
     const eraNav = document.querySelector('.era-nav');
     const eraSections = Array.from(document.querySelectorAll('.era-section'));
+    // Make sure to include the llm-themes section
+    const llmSection = document.getElementById('llm-themes');
+    if (llmSection && !eraSections.includes(llmSection)) {
+      eraSections.push(llmSection);
+    }
     const filterContainer = document.querySelector('.filter-container');
     
     // Use DocumentFragment for better performance when creating elements
