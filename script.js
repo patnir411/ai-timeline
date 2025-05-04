@@ -24,24 +24,11 @@
     });
   });
   
-  // Add llm-themes to era sections
-  document.addEventListener('DOMContentLoaded', () => {
-    const llmThemes = document.getElementById('llm-themes');
-    if (llmThemes) {
-      llmThemes.classList.add('era-section');
-    }
-  });
-
   // Performance optimizations
   onReady(() => {
     // Cache key DOM elements with one-time lookups
     const eraNav = document.querySelector('.era-nav');
     const eraSections = Array.from(document.querySelectorAll('.era-section'));
-    // Make sure to include the llm-themes section
-    const llmSection = document.getElementById('llm-themes');
-    if (llmSection && !eraSections.includes(llmSection)) {
-      eraSections.push(llmSection);
-    }
     const filterContainer = document.querySelector('.filter-container');
     
     // Use DocumentFragment for better performance when creating elements
