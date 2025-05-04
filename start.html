@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Timeline - Start</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f7fa;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #3a1c71;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            border: none;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        .primary {
+            background: #3a1c71;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .primary:hover {
+            background: #4a2c81;
+        }
+        
+        .secondary {
+            background: white;
+            color: #3a1c71;
+            border: 2px solid #3a1c71;
+        }
+        
+        .secondary:hover {
+            background: #f0f0f0;
+        }
+        
+        .doc-links {
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .doc-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background: #f8f9fa;
+            border-radius: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .doc-link:hover {
+            background: #e9ecef;
+        }
+        
+        .doc-icon {
+            margin-right: 0.5rem;
+            width: 24px;
+            height: 24px;
+            text-align: center;
+        }
+        
+        .footer {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Timeline Explorer</h1>
+        <p>Welcome to the Interactive AI Timeline! This visualization traces the complete history of artificial intelligence from its mathematical foundations to modern large language models.</p>
+        
+        <div class="preview" style="margin: 2rem 0;">
+            <!-- Preview image placeholder -->
+            <div style="background: #f0f2f5; padding: 2rem; border-radius: 10px; text-align: center;">
+                <p style="margin: 0;">Timeline Preview</p>
+            </div>
+        </div>
+        
+        <p>You can explore key milestones, breakthroughs, and the figures who shaped the field of AI across different eras. The timeline features interactive elements, filtering options, and beautiful visualizations.</p>
+        
+        <div class="button-container">
+            <a href="index.html" class="button primary">Launch Timeline</a>
+            <a href="https://github.com/yourusername/ai-timeline" target="_blank" class="button secondary">View on GitHub</a>
+        </div>
+        
+        <div class="doc-links">
+            <a href="README.md" class="doc-link">
+                <span class="doc-icon">📖</span> Read Documentation
+            </a>
+            <a href="GUIDE.md" class="doc-link">
+                <span class="doc-icon">🧭</span> User Guide
+            </a>
+            <a href="CUSTOMIZATION.md" class="doc-link">
+                <span class="doc-icon">🛠️</span> Customization
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>Created with ❤️ using HTML, CSS, and JavaScript</p>
+        </div>
+    </div>
+</body>
+</html>

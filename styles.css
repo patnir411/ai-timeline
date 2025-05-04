@@ -1,0 +1,579 @@
+/* Maximal performance AI Timeline styles */
+:root {
+    --primary-color: #3a1c71;
+    --secondary-color: #d76d77;
+    --text-color: #333;
+    --light-text: #f8f9fa;
+    --dark-bg: #232526;
+    --light-bg: #f8f9fa;
+    --card-bg: #fff;
+    --timeline-dot: #3a1c71;
+    --timeline-line: #999;
+    --transition-speed: 0s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-color);
+    background: #f5f7fa;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header - simplified with solid colors */
+header {
+    background: var(--primary-color);
+    color: var(--light-text);
+    padding: 40px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Era navigation - simplified */
+.era-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.era-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: var(--light-text);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.era-btn:hover, .era-btn.active {
+    background: var(--light-text);
+    color: var(--primary-color);
+}
+
+/* Timeline structure - simplified */
+.timeline-container {
+    position: relative;
+    padding: 30px 0;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: var(--timeline-line);
+}
+
+.timeline-item {
+    margin-bottom: 60px;
+    position: relative;
+    display: flex;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--timeline-dot);
+    z-index: 2;
+}
+
+.timeline-content {
+    width: 45%;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-right: auto;
+    padding-right: 40px;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: auto;
+    padding-left: 40px;
+}
+
+/* Timeline card - simplified */
+.date {
+    display: inline-block;
+    padding: 5px 12px;
+    background: var(--primary-color);
+    color: var(--light-text);
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.key-figures {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+}
+
+.significance {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+/* Era sections */
+.era-section {
+    padding: 30px 0;
+    margin-bottom: 30px;
+}
+
+.era-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.era-description {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.timeline-year {
+    position: absolute;
+    top: 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.timeline-item:nth-child(odd) .timeline-year {
+    right: calc(50% + 45px);
+}
+
+.timeline-item:nth-child(even) .timeline-year {
+    left: calc(50% + 45px);
+}
+
+/* Future section - simplified */
+.future-section {
+    padding: 60px 0;
+    text-align: center;
+    background: #2b5876;
+    color: var(--light-text);
+    border-radius: 10px;
+    margin: 50px 0;
+}
+
+.future-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.future-content {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Filter buttons - simplified */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-btn {
+    background: var(--light-bg);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--primary-color);
+    color: var(--light-text);
+}
+
+/* No animations or transitions */
+.fade-in {
+    opacity: 1;
+    transform: none;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Footer - simplified */
+footer {
+    background: var(--dark-bg);
+    color: var(--light-text);
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-copyright {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Tooltip styling - simplified */
+.tooltip {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.timeline-dot:hover + .tooltip {
+    opacity: 1;
+}
+
+/* Simplified accessibility improvements */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    padding: 8px;
+    background: var(--primary-color);
+    color: var(--light-text);
+    z-index: 1000;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* Responsive design - simplified */
+@media (max-width: 992px) {
+    .timeline-container::before {
+        left: 30px;
+    }
+
+    .timeline-dot {
+        left: 30px;
+    }
+
+    .timeline-content {
+        width: 85%;
+        margin-left: auto !important;
+        padding-left: 60px !important;
+        text-align: left !important;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+        padding-right: 0;
+    }
+
+    .timeline-year {
+        left: 80px !important;
+        right: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .era-title {
+        font-size: 1.8rem;
+    }
+
+    .future-title {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        padding: 15px;
+    }
+    
+    .timeline-dot {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .timeline-content {
+        width: 90%;
+    }
+    
+    /* Mobile navigation */
+    .era-nav {
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+    }
+    
+    .era-nav.open {
+        max-height: 500px;
+    }
+    
+    .mobile-nav-toggle {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        margin: 0 auto 20px;
+        position: relative;
+    }
+    
+    .mobile-nav-toggle span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 6px auto;
+    }
+    
+    .mobile-nav-toggle.open span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+    
+    .mobile-nav-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-nav-toggle.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .era-btn {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Dark mode - simplified */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --light-bg: #232526;
+        --dark-bg: #1a1b1c;
+        --text-color: #f8f9fa;
+        --light-text: #f8f9fa;
+        --card-bg: #2d2e30;
+    }
+    
+    body {
+        background: #232526;
+    }
+    
+    .key-figures, .significance {
+        color: #bbb;
+    }
+    
+    .significance {
+        border-top-color: #444;
+    }
+    
+    .era-description {
+        color: #bbb;
+    }
+    
+    .filter-btn {
+        background: #333;
+        color: #ddd;
+    }
+}
+
+/* Dark mode toggle */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.dark-mode {
+    background: #232526;
+    color: #f8f9fa;
+}
+
+body.dark-mode .card {
+    background: #2d2e30;
+    color: #f8f9fa;
+}
+
+body.dark-mode .era-title {
+    color: var(--secondary-color);
+}
+
+body.dark-mode .card h3 {
+    color: var(--secondary-color);
+}
+
+/* Simplified search */
+.search-container {
+    margin: 20px auto 0;
+    max-width: 600px;
+    display: flex;
+    position: relative;
+    z-index: 10;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px 15px;
+    border-radius: 20px 0 0 20px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--light-text);
+    font-size: 16px;
+}
+
+.search-btn {
+    padding: 10px 20px;
+    border-radius: 0 20px 20px 0;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    color: var(--light-text);
+    cursor: pointer;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-height: 300px;
+    overflow-y: auto;
+    display: none;
+    z-index: 100;
+}
+
+.search-result-item {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.search-result-item:hover {
+    background: #f0f0f0;
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    header, footer {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
+    
+    .timeline-container::before {
+        background: #aaa !important;
+    }
+    
+    .dark-mode-toggle, .mobile-nav-toggle {
+        display: none !important;
+    }
+}
