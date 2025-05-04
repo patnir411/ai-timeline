@@ -3,38 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Evolution of AI: An Interactive Timeline</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>AI Timeline</title>
+    <meta name="description" content="A comprehensive timeline of AI development from mathematical foundations to modern LLMs">
     <link rel="stylesheet" href="styles.css">
+    <!-- Critical CSS - Dark Mode by Default -->
+    <style>
+        body{margin:0;font-family:'Inter',-apple-system,system-ui,sans-serif;background:#1a1a1a;color:#e1e1e6;-webkit-font-smoothing:antialiased}
+        header{background:linear-gradient(135deg,#6b46c1 0%,#805ad5 100%);color:#f8f9fa;padding:20px 0;box-shadow:0 2px 10px rgba(0,0,0,.2)}
+        .container{max-width:1100px;margin:0 auto;padding:0 15px}
+        .timeline-container{opacity:1;will-change:transform}
+        .era-btn{background:rgba(255,255,255,.1);border:none;padding:8px 12px;border-radius:4px;color:#f8f9fa;font-size:.85rem;margin:3px;cursor:pointer}
+        .era-btn.active{background:#f8f9fa;color:#6b46c1}
+        @media (prefers-color-scheme:light){body{background:#f9f9f9;color:#333}}
+    </style>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
             <h1>The Evolution of Artificial Intelligence</h1>
-            <p class="subtitle">A visual journey through the key moments, breakthroughs, and paradigm shifts that led to modern AI and Large Language Models</p>
+            <p class="subtitle">A comprehensive timeline of breakthroughs and developments from foundations to modern AI</p>
             
             <div class="era-nav">
-                <button class="era-btn active" data-era="all">All Eras</button>
-                <button class="era-btn" data-era="foundations">Mathematical Foundations</button>
-                <button class="era-btn" data-era="computation">Birth of Computation</button>
-                <button class="era-btn" data-era="early-ai">Birth of AI</button>
-                <button class="era-btn" data-era="ai-winters">AI Winters & Revival</button>
-                <button class="era-btn" data-era="neural">Neural Renaissance</button>
-                <button class="era-btn" data-era="data-hardware">Data & Hardware</button>
-                <button class="era-btn" data-era="nlp">NLP Revolution</button>
-                <button class="era-btn" data-era="transformers">Transformer Era</button>
+                <button class="era-btn active" data-era="all">All</button>
+                <button class="era-btn" data-era="foundations">Foundations</button>
+                <button class="era-btn" data-era="computation">Computation</button>
+                <button class="era-btn" data-era="early-ai">Early AI</button>
+                <button class="era-btn" data-era="ai-winters">AI Winters</button>
+                <button class="era-btn" data-era="neural">Neural Nets</button>
+                <button class="era-btn" data-era="data-hardware">Data/Hardware</button>
+                <button class="era-btn" data-era="nlp">NLP</button>
+                <button class="era-btn" data-era="transformers">Transformers</button>
             </div>
         </div>
     </header>
 
     <main class="container">
-        <!-- Foundations Era (Pre-20th Century) -->
-        <section id="foundations" class="era-section fade-in">
-            <h2 class="era-title">The Mathematical Bedrock</h2>
-            <p class="era-description">Long before computers existed, mathematicians developed formal systems for reasoning, quantifying uncertainty, modeling change, and manipulating abstract structures—tools that would prove essential for computational intelligence.</p>
+        <!-- Foundations Era -->
+        <section id="foundations" class="era-section">
+            <h2 class="era-title">Mathematical Foundations</h2>
+            <p class="era-description">Early mathematical concepts that became essential for computational intelligence</p>
 
             <div class="filter-container">
-                <button class="filter-btn active" data-filter="all">All Concepts</button>
+                <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="logic">Logic</button>
                 <button class="filter-btn" data-filter="probability">Probability</button>
                 <button class="filter-btn" data-filter="calculus">Calculus</button>
@@ -42,626 +56,877 @@
             </div>
 
             <div class="timeline-container">
-                <div class="timeline-item fade-in" data-category="logic">
+                <div class="timeline-item" data-category="logic">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1847-1854</span>
+                    <span class="timeline-year">1854</span>
                     <div class="timeline-content">
-                        <span class="date">1847-1854</span>
+                        <span class="date">1854</span>
                         <div class="card">
                             <h3>Boolean Algebra</h3>
-                            <p>George Boole formalized logic using algebra in his works "The Mathematical Analysis of Logic" and "An Investigation of the Laws of Thought," introducing a system where logical operations could be represented using binary values (0 and 1).</p>
+                            <p>George Boole published "An Investigation of the Laws of Thought" in 1854, establishing an algebraic system of logic that treated logical propositions with binary values (true/false) and logical operations (AND, OR, NOT).</p>
                             <p class="key-figures">Key Figure: George Boole</p>
-                            <p class="significance">Significance: Laid the foundation for digital circuits and computation by establishing a mathematical framework for logical operations, directly influencing the design principles of modern computers.</p>
+                            <p class="significance">Laid the foundation for digital circuits and computation. This mathematical logic underpins digital circuit design and binary decision processes used in computer algorithms. A century later, Claude Shannon demonstrated the equivalence of logic circuits to Boolean algebra, linking Boole's work to electronic computing.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in" data-category="logic">
+                <div class="timeline-item" data-category="logic">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">1879</span>
                     <div class="timeline-content">
                         <span class="date">1879</span>
                         <div class="card">
                             <h3>Predicate Calculus (Begriffsschrift)</h3>
-                            <p>Gottlob Frege developed predicate calculus in his work "Begriffsschrift," extending propositional logic with predicates and quantifiers, enabling more precise and expressive logical representation.</p>
+                            <p>German logician Gottlob Frege introduced the first formal predicate calculus in his 1879 book "Begriffsschrift," representing complex statements with quantifiers and variables. Frege's logical notation could express "for all" and "there exists," vastly extending earlier logic.</p>
                             <p class="key-figures">Key Figure: Gottlob Frege</p>
-                            <p class="significance">Significance: Created a powerful formal language crucial for representing complex statements and reasoning, later essential for knowledge representation and automated reasoning in AI.</p>
+                            <p class="significance">By enabling precise reasoning about arbitrary predicates, this innovation provided a formal language for mathematics and later for knowledge representation in AI systems. This laid crucial groundwork for symbolic reasoning capabilities in artificial intelligence.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in" data-category="logic">
+                <div class="timeline-item" data-category="logic">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">1910-1913</span>
                     <div class="timeline-content">
                         <span class="date">1910-1913</span>
                         <div class="card">
                             <h3>Principia Mathematica</h3>
-                            <p>Bertrand Russell and Alfred North Whitehead published their monumental work attempting to derive all mathematical truths from logical axioms and rules, establishing a rigorous formal system for mathematical reasoning.</p>
+                            <p>Russell and Whitehead's monumental work attempting to derive all mathematics from logical axioms. This formalized mathematics and systems of inference, though Kurt Gödel later showed the inherent limitations of such formal systems.</p>
                             <p class="key-figures">Key Figures: Bertrand Russell, Alfred North Whitehead</p>
-                            <p class="significance">Significance: Advanced formal systems and the idea that mathematics could be built from logical foundations, influencing later developments in computational logic.</p>
+                            <p class="significance">Advanced formal systems for mathematical reasoning. The first AI program, Logic Theorist (1956), would later prove theorems from this work.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in" data-category="probability">
+                <div class="timeline-item" data-category="probability">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">17th Century</span>
+                    <span class="timeline-year">1642-1679</span>
                     <div class="timeline-content">
-                        <span class="date">17th Century</span>
+                        <span class="date">1642-1679</span>
                         <div class="card">
-                            <h3>Probability Theory Formalization</h3>
-                            <p>The mathematical foundation for quantifying uncertainty was developed through correspondence between Blaise Pascal and Pierre de Fermat, solving problems related to games of chance and establishing the basis for statistical reasoning.</p>
-                            <p class="key-figures">Key Figures: Blaise Pascal, Pierre de Fermat</p>
-                            <p class="significance">Significance: Provided the essential framework for handling uncertainty, which is central to modern machine learning and AI's ability to make predictions from data.</p>
+                            <h3>Early Computation and Binary Logic</h3>
+                            <p>In 1642, Blaise Pascal built the Pascaline, the first functional mechanical calculator for addition and subtraction. In 1679, Gottfried Wilhelm Leibniz outlined the binary number system, later published in his 1703 "Explication de l'Arithmétique Binaire," introducing base-2 arithmetic using 0 and 1. This foundational work established the mathematics of binary logic.</p>
+                            <p class="key-figures">Key Figures: Blaise Pascal, Gottfried Wilhelm Leibniz</p>
+                            <p class="significance">Pascal's mechanical calculator demonstrated the feasibility of automated computation. Leibniz's binary system became the bedrock for digital circuits and modern computer architecture, enabling the logical operations fundamental to computing. Binary logic would later become essential for all digital computing and AI systems.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-category="probability">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-year">17th-18th Century</span>
+                    <div class="timeline-content">
+                        <span class="date">17th-18th Century</span>
+                        <div class="card">
+                            <h3>Probability Theory</h3>
+                            <p>Mathematical foundation for quantifying uncertainty developed by Pascal and Fermat, later expanded by Laplace. Crucial development of Bayes' Theorem (18th century) provided a way to update beliefs given new evidence.</p>
+                            <p class="key-figures">Key Figures: Blaise Pascal, Pierre de Fermat, Thomas Bayes, Pierre-Simon Laplace</p>
+                            <p class="significance">Essential framework for handling uncertainty in machine learning. Bayesian methods became fundamental to many ML algorithms, providing a principled way to update model parameters as more data is observed.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in" data-category="calculus">
+                <div class="timeline-item" data-category="calculus">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">Late 17th Century</span>
                     <div class="timeline-content">
                         <span class="date">Late 17th Century</span>
                         <div class="card">
                             <h3>Calculus</h3>
-                            <p>Isaac Newton and Gottfried Wilhelm Leibniz independently developed calculus, creating mathematical tools to understand rates of change and accumulation, revolutionizing our ability to model dynamic processes.</p>
+                            <p>Newton and Leibniz independently developed calculus to understand rates of change. Differentiation (calculating rates of change) later became crucial for optimization in machine learning algorithms.</p>
                             <p class="key-figures">Key Figures: Isaac Newton, Gottfried Wilhelm Leibniz</p>
-                            <p class="significance">Significance: Provided the optimization framework (differentiation) that is fundamental to modern machine learning training methods like gradient descent.</p>
+                            <p class="significance">Provides the optimization framework used in gradient descent and backpropagation, the cornerstone algorithms for training neural networks. The process of finding parameters that minimize error functions relies directly on principles of calculus.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in" data-category="algebra">
+                <div class="timeline-item" data-category="algebra">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">Mid-19th Century</span>
                     <div class="timeline-content">
                         <span class="date">Mid-19th Century</span>
                         <div class="card">
                             <h3>Matrix Algebra</h3>
-                            <p>Arthur Cayley and James Joseph Sylvester developed matrix algebra, formalizing the operations and properties of matrices and establishing their connection to linear transformations.</p>
-                            <p class="key-figures">Key Figures: Arthur Cayley, James Joseph Sylvester</p>
-                            <p class="significance">Significance: Created the essential mathematical tools for representing and manipulating multi-dimensional data and transformations, which are fundamental to all modern neural networks.</p>
+                            <p>Cayley and Sylvester developed matrix algebra, formalizing operations with matrices. Later formalized by Giuseppe Peano (1888) with the first modern definition of a vector space.</p>
+                            <p class="key-figures">Key Figures: Arthur Cayley, James Joseph Sylvester, Giuseppe Peano</p>
+                            <p class="significance">Essential for representing multi-dimensional data in neural networks. Modern deep learning relies heavily on matrix operations for representing inputs, outputs, and model parameters as vectors and matrices.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Computation Era (Early-Mid 20th Century) -->
-        <section id="computation" class="era-section fade-in">
-            <h2 class="era-title">Formalizing Computation and Information</h2>
-            <p class="era-description">The early 20th century saw profound developments in the foundational theory of computation and information, establishing what machines can and cannot do, and how information can be quantified and processed.</p>
+        <!-- Computation Era -->
+        <section id="computation" class="era-section">
+            <h2 class="era-title">Computation Theory</h2>
+            <p class="era-description">Foundations of computation and information theory that defined the theoretical landscape for AI</p>
 
             <div class="timeline-container">
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1930s</span>
+                    <span class="timeline-year">1928</span>
                     <div class="timeline-content">
-                        <span class="date">1930s</span>
+                        <span class="date">1928</span>
                         <div class="card">
-                            <h3>Computability Theory</h3>
-                            <p>Multiple mathematicians formalized the concept of computation, defining precisely what it means for a problem to be "computable" through different but equivalent models including Turing Machines, Lambda Calculus, and Recursive Functions.</p>
-                            <p class="key-figures">Key Figures: Alan Turing, Alonzo Church, Kurt Gödel</p>
-                            <p class="significance">Significance: Established the theoretical foundation for all computing, defining the limits of what algorithms can achieve and providing the conceptual basis for AI as computation.</p>
+                            <h3>Hilbert's Entscheidungsproblem</h3>
+                            <p>David Hilbert posed the decision problem (Entscheidungsproblem) to find an algorithm that could determine the validity of any statement in first-order logic, as part of his program to establish axiomatic foundations for mathematics.</p>
+                            <p class="key-figures">Key Figures: David Hilbert, Wilhelm Ackermann</p>
+                            <p class="significance">This challenge directly motivated the development of computability theory and formal definitions of algorithms, leading to breakthrough work by Church and Turing.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">1931</span>
                     <div class="timeline-content">
                         <span class="date">1931</span>
                         <div class="card">
                             <h3>Gödel's Incompleteness Theorems</h3>
-                            <p>Kurt Gödel proved that any consistent formal system capable of expressing basic arithmetic contains statements that can neither be proven nor disproven within the system, demonstrating inherent limitations to formal mathematics.</p>
+                            <p>Kurt Gödel proved that any consistent formal mathematical system capable of expressing arithmetic contains true statements that cannot be proven within that system, shattering Hilbert's program and revealing inherent limitations of formal systems.</p>
                             <p class="key-figures">Key Figure: Kurt Gödel</p>
-                            <p class="significance">Significance: Revealed fundamental boundaries to what formal systems (including computer programs) can accomplish, with profound implications for AI's theoretical limits.</p>
+                            <p class="significance">Revealed fundamental boundaries to what formal systems (and by extension, computation) can accomplish. This continuing influence on philosophy of mind fuels debates about whether human intelligence transcends computational limits.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">1936</span>
                     <div class="timeline-content">
                         <span class="date">1936</span>
                         <div class="card">
-                            <h3>Turing Machine & Church-Turing Thesis</h3>
-                            <p>Alan Turing introduced his abstract model of computation (the Turing Machine) while Alonzo Church developed Lambda Calculus. Their equivalence led to the Church-Turing thesis, positing that any effectively calculable function can be computed by a Turing machine.</p>
-                            <p class="key-figures">Key Figures: Alan Turing, Alonzo Church</p>
-                            <p class="significance">Significance: Formalized the intuitive notion of an algorithm and provided the theoretical grounding for the possibility of artificial intelligence as computation.</p>
+                            <h3>Church's Lambda Calculus</h3>
+                            <p>Alonzo Church developed Lambda Calculus, a formal system for function abstraction and application. He used it to provide the first negative answer to the Entscheidungsproblem, proving that no algorithm can decide the validity of all first-order logic formulas.</p>
+                            <p class="key-figures">Key Figure: Alonzo Church</p>
+                            <p class="significance">Equivalent to Turing Machines in computational power, Lambda Calculus became the theoretical basis for functional programming languages like LISP, which was crucial for early AI development.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-year">1936</span>
+                    <div class="timeline-content">
+                        <span class="date">1936</span>
+                        <div class="card">
+                            <h3>Turing Machine & The Halting Problem</h3>
+                            <p>Alan Turing introduced his abstract model of computation that consists of an infinite tape, a read/write head, and a finite set of states. He independently proved the Entscheidungsproblem undecidable and established the Halting Problem (determining if a program will terminate) as undecidable.</p>
+                            <p class="key-figures">Key Figure: Alan Turing</p>
+                            <p class="significance">Defined computability in terms of what a Turing machine could compute, establishing theoretical limits of algorithmic procedures. The Universal Turing Machine concept (a machine that can simulate any other Turing machine) prefigured the modern stored-program computer.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-year">1936-1937</span>
+                    <div class="timeline-content">
+                        <span class="date">1936-1937</span>
+                        <div class="card">
+                            <h3>Church-Turing Thesis</h3>
+                            <p>The independent convergence of Church's Lambda Calculus and Turing's machines on the same class of computable functions led to this fundamental thesis: any function that can be "effectively calculated" by any intuitive process is computable by a Turing machine.</p>
+                            <p class="key-figures">Key Figures: Alonzo Church, Alan Turing</p>
+                            <p class="significance">Defined the theoretical boundary of what algorithms can compute. For AI, this implies that any intelligence achievable through algorithmic processes operates within the limits of Turing computability.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-year">1943</span>
+                    <div class="timeline-content">
+                        <span class="date">1943</span>
+                        <div class="card">
+                            <h3>McCulloch-Pitts Neuron</h3>
+                            <p>Warren McCulloch and Walter Pitts proposed a simplified mathematical model of neurons in 1943, using boolean logic to represent neural activity. They showed how networks of binary threshold units could, in principle, compute logical functions.</p>
+                            <p class="key-figures">Key Figures: Warren McCulloch, Walter Pitts</p>
+                            <p class="significance">This was the first artificial neural network concept, suggesting that cognition could be realized by networks of on/off units. Although primitive, it planted the seed for connectionism, the paradigm underpinning modern neural networks and deep learning-based LLMs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-year">1945</span>
+                    <div class="timeline-content">
+                        <span class="date">1945</span>
+                        <div class="card">
+                            <h3>Von Neumann Architecture</h3>
+                            <p>In 1945, John von Neumann's EDVAC report described a stored-program computer architecture, where program instructions and data share the same memory. This architecture became the template for virtually all modern computers.</p>
+                            <p class="key-figures">Key Figure: John von Neumann</p>
+                            <p class="significance">Von Neumann architecture allowed computers to flexibly execute any instruction sequence, enabling the implementation of complex algorithms needed for AI. By the late 1940s, general-purpose electronic computers (ENIAC, EDVAC) could be programmed to perform logical and arithmetic operations, providing a necessary platform for running future AI programs and training models.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">1948</span>
                     <div class="timeline-content">
                         <span class="date">1948</span>
                         <div class="card">
                             <h3>Information Theory</h3>
-                            <p>Claude Shannon published "A Mathematical Theory of Communication," establishing information theory by quantifying information (entropy), defining channel capacity, and laying the foundation for digital communication systems.</p>
+                            <p>Claude Shannon published "A Mathematical Theory of Communication" in 1948, founding the field of information theory. He defined bits (binary digits) as the basic unit of information and quantified information entropy. Shannon showed how any message could be encoded as a sequence of bits and analyzed communication channel capacity.</p>
                             <p class="key-figures">Key Figure: Claude Shannon (Bell Labs)</p>
-                            <p class="significance">Significance: Provided the mathematical framework for understanding information, which underlies modern AI metrics like cross-entropy loss and perplexity used to train language models.</p>
+                            <p class="significance">Shannon's work influenced data compression and error correction (crucial for large dataset storage and transmission) and early language modeling. His experiments on predicting the next letter in English text foreshadowed statistical language modeling by treating language as an information source. Shannon also demonstrated logic circuits' equivalence to Boolean algebra, linking Boole's logic to electronic computing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-year">1949</span>
+                    <div class="timeline-content">
+                        <span class="date">1949</span>
+                        <div class="card">
+                            <h3>Hebbian Learning</h3>
+                            <p>Donald Hebb proposed that neural connections strengthen when neurons fire together, captured in the phrase "neurons that fire together, wire together." He theorized about cell assemblies and phase sequences as the neural basis for thoughts and memories.</p>
+                            <p class="key-figures">Key Figure: Donald Hebb</p>
+                            <p class="significance">Provided a plausible biological mechanism for unsupervised learning in neural networks, influencing later connectionist approaches to AI.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Early AI Era (1950s-1960s) -->
-        <section id="early-ai" class="era-section fade-in">
-            <h2 class="era-title">The Dawn of Artificial Intelligence</h2>
-            <p class="era-description">The 1950s and 1960s saw the birth of AI as a distinct field, with foundational concepts, inaugural events, and the first practical demonstrations of machine intelligence.</p>
+        <!-- Early AI Era -->
+        <section id="early-ai" class="era-section">
+            <h2 class="era-title">Birth of AI</h2>
+            <p class="era-description">Establishment of artificial intelligence as a distinct field of research</p>
 
             <div class="timeline-container">
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">1950</span>
                     <div class="timeline-content">
                         <span class="date">1950</span>
                         <div class="card">
                             <h3>The Turing Test</h3>
-                            <p>Alan Turing published "Computing Machinery and Intelligence," proposing an operational test for machine intelligence based on a computer's ability to exhibit human-like conversation indistinguishable from a real person.</p>
+                            <p>Alan Turing's 1950 paper "Computing Machinery and Intelligence" introduced the Turing Test (originally called the "Imitation Game"), proposing that a machine could be called intelligent if its typed responses in a conversation could fool a human interrogator. This work popularized the question "Can machines think?"</p>
                             <p class="key-figures">Key Figure: Alan Turing</p>
-                            <p class="significance">Significance: Provided a pragmatic benchmark for AI and highlighted natural language as a key challenge, influencing the direction of AI research for decades to come.</p>
+                            <p class="significance">While not a technical innovation in engineering, the Turing Test provided a guiding vision and evaluation framework for language-based AI systems. It shifted focus toward natural language conversation as a benchmark for AI and effectively predicted the development of conversational agents like chatbots and, ultimately, chat-based LLM interfaces.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">1956</span>
                     <div class="timeline-content">
                         <span class="date">1956</span>
                         <div class="card">
-                            <h3>Dartmouth Workshop</h3>
-                            <p>The Dartmouth Summer Research Project on Artificial Intelligence coined the term "Artificial Intelligence" and brought together pioneering researchers who would establish the major AI research centers and shape the field's early direction.</p>
+                            <h3>Dartmouth Workshop and Birth of "Artificial Intelligence"</h3>
+                            <p>The Dartmouth Summer Research Project of 1956, organized by John McCarthy, Marvin Minsky, Claude Shannon, and Nathan Rochester, is considered the birth of AI as a field. McCarthy coined the term "artificial intelligence" at this workshop. Researchers discussed how every aspect of learning or intelligence could in principle be so precisely described that a machine could simulate it.</p>
                             <p class="key-figures">Key Figures: John McCarthy, Marvin Minsky, Claude Shannon, Nathaniel Rochester</p>
-                            <p class="significance">Significance: Officially launched AI as a research discipline and established the ambitious vision that "every aspect of learning or intelligence can in principle be precisely described for machine simulation."</p>
+                            <p class="significance">This workshop established the agenda of using computers for high-level reasoning and problem-solving. It launched AI as a formal research discipline, established its name and identity, and set key research directions (particularly favoring symbolic approaches). The workshop generated significant enthusiasm and attracted crucial early funding from DARPA.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">1956</span>
                     <div class="timeline-content">
                         <span class="date">1956</span>
                         <div class="card">
                             <h3>Logic Theorist</h3>
-                            <p>The first AI program demonstrated the ability to prove mathematical theorems from Whitehead and Russell's Principia Mathematica using symbolic reasoning and heuristics, even finding a more elegant proof for one theorem than the original.</p>
+                            <p>The first AI program that could prove mathematical theorems using symbolic reasoning. It successfully proved 38 of the first 52 theorems in Russell and Whitehead's Principia Mathematica, even finding a more elegant proof for one theorem than the original.</p>
                             <p class="key-figures">Key Figures: Allen Newell, Herbert Simon, Cliff Shaw</p>
-                            <p class="significance">Significance: Provided the first concrete demonstration that machines could perform tasks requiring reasoning and problem-solving, establishing the symbolic approach to AI.</p>
+                            <p class="significance">First demonstration of machine reasoning and problem-solving. Its presentation at the Dartmouth Workshop provided compelling evidence for the symbolic approach to AI.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1958</span>
+                    <span class="timeline-year">1957</span>
                     <div class="timeline-content">
-                        <span class="date">1958</span>
+                        <span class="date">1957</span>
                         <div class="card">
-                            <h3>Perceptron</h3>
-                            <p>Frank Rosenblatt developed the Perceptron, the first trainable artificial neural network for pattern recognition, implemented both as software and custom hardware (the Mark I Perceptron).</p>
+                            <h3>General Problem Solver (GPS)</h3>
+                            <p>Building on Logic Theorist, Newell and Simon developed GPS with the ambitious goal of creating a universal problem-solving engine. It used means-ends analysis to identify differences between current and goal states and find operators to reduce these differences.</p>
+                            <p class="key-figures">Key Figures: Allen Newell, Herbert Simon</p>
+                            <p class="significance">Introduced influential problem-solving methodologies that separated general reasoning strategy from domain-specific knowledge. Ultimately struggled with combinatorial explosion in complex domains, foreshadowing challenges for symbolic AI.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-year">1957-1960</span>
+                    <div class="timeline-content">
+                        <span class="date">1957-1960</span>
+                        <div class="card">
+                            <h3>The Perceptron</h3>
+                            <p>Frank Rosenblatt developed the perceptron, an algorithm inspired by neurons that learned to classify inputs. In 1957 he simulated a single-layer perceptron on an IBM 704 computer and later built custom hardware (Mark I Perceptron) by 1960 with 400 photo-sensors to recognize simple patterns. The perceptron learned via incremental weight updates to reduce classification error.</p>
                             <p class="key-figures">Key Figure: Frank Rosenblatt</p>
-                            <p class="significance">Significance: Pioneered connectionism as an alternative paradigm to symbolic AI, introducing the concept of a learning algorithm that could automatically adjust weights based on examples.</p>
+                            <p class="significance">This was an early example of a self-learning machine – Rosenblatt's machine could improve at tasks like letter recognition through experience. This "connectionist" approach was a forerunner to modern neural networks. However, perceptrons could only learn linearly separable patterns, a limitation later highlighted by Minsky and Papert in 1969, leading to reduced funding for neural networks research.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">1958</span>
                     <div class="timeline-content">
                         <span class="date">1958</span>
                         <div class="card">
-                            <h3>LISP Programming Language</h3>
-                            <p>John McCarthy developed LISP (List Processing), a programming language specifically designed to facilitate symbol manipulation for AI research, featuring treating code as data and support for recursion.</p>
+                            <h3>LISP and Symbolic Processing</h3>
+                            <p>In 1958, John McCarthy at MIT invented LISP (LISt Processing), a high-level programming language designed for AI research. Lisp introduced features like symbolic expressions, automatic memory management (garbage collection), and a recursion-friendly, homoiconic syntax, all suited for manipulating symbols and building AI programs.</p>
                             <p class="key-figures">Key Figure: John McCarthy</p>
-                            <p class="significance">Significance: Became the dominant language for symbolic AI research for decades, enabling complex symbolic reasoning systems and expert systems.</p>
+                            <p class="significance">Lisp became the dominant AI language for decades, empowering the development of knowledge-based systems and NLP prototypes. It formalized the philosophical basis for symbolic AI, arguing that manipulation of symbolic representations according to formal rules could produce intelligence. Its influence extended beyond AI to programming language design, introducing many concepts that became standard in modern languages.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-year">1959</span>
+                    <div class="timeline-content">
+                        <span class="date">1959</span>
+                        <div class="card">
+                            <h3>Machine Learning and Self-Teaching Programs</h3>
+                            <p>IBM researcher Arthur Samuel pioneered machine learning in 1959 with his checkers-playing program. Samuel's program learned to improve its play through self-play and incremental parameter tuning, achieving a level that challenged human players. He famously defined machine learning as a field where computers "learn without being explicitly programmed."</p>
+                            <p class="key-figures">Key Figure: Arthur Samuel (IBM)</p>
+                            <p class="significance">In July 1959, Samuel published results on "Some Studies in Machine Learning Using the Game of Checkers," demonstrating that a computer using past game outcomes could refine its evaluation function. This was one of the first practical applications of ML and introduced the notion of self-learning systems. Samuel's work showed that rather than hand-coding all knowledge, machines could learn from data – a concept underlying modern LLM training.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-year">1959</span>
+                    <div class="timeline-content">
+                        <span class="date">1959</span>
+                        <div class="card">
+                            <h3>Physical Symbol System Hypothesis</h3>
+                            <p>Articulated by Newell and Simon, this hypothesis posited that "a physical symbol system has the necessary and sufficient means for general intelligent action." It provided the theoretical foundation for symbolic AI approaches.</p>
+                            <p class="key-figures">Key Figures: Allen Newell, Herbert Simon</p>
+                            <p class="significance">Formalized the philosophical basis for symbolic AI, arguing that manipulation of symbolic representations according to formal rules could produce intelligence. This remained the dominant view of AI for decades.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- AI Winters and Revival (1960s-1980s) -->
-        <section id="ai-winters" class="era-section fade-in">
-            <h2 class="era-title">Parallel Paths and Early Winters</h2>
-            <p class="era-description">The 1960s through 1980s saw both setbacks for AI, with periods of reduced funding known as "AI Winters," and the continued development of key techniques that would later prove essential.</p>
+        <!-- AI Winters -->
+        <section id="ai-winters" class="era-section">
+            <h2 class="era-title">AI Winters & Revival</h2>
+            <p class="era-description">Periods of reduced funding and interest, with continued development of key techniques</p>
 
             <div class="timeline-container">
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">1969</span>
                     <div class="timeline-content">
                         <span class="date">1969</span>
                         <div class="card">
                             <h3>"Perceptrons" Book</h3>
-                            <p>Marvin Minsky and Seymour Papert published a mathematical analysis showing that single-layer perceptrons could not learn certain fundamental functions like XOR, dampening enthusiasm for neural network research.</p>
+                            <p>Marvin Minsky and Seymour Papert published a rigorous mathematical analysis of the capabilities and limitations of single-layer perceptrons, proving they couldn't learn the XOR function due to linear separability constraints.</p>
                             <p class="key-figures">Key Figures: Marvin Minsky, Seymour Papert</p>
-                            <p class="significance">Significance: Contributed to the first AI winter by shifting focus away from connectionist approaches and towards symbolic methods, delaying neural network research for over a decade.</p>
+                            <p class="significance">Contributed to first AI winter by dampening enthusiasm for neural networks. While acknowledging multi-layer networks could overcome these limitations, the book expressed skepticism about effective training methods, which weren't discovered until the 1980s.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-year">1966-1973</span>
+                    <div class="timeline-content">
+                        <span class="date">1966-1973</span>
+                        <div class="card">
+                            <h3>Critical Reports</h3>
+                            <p>Two influential reports critically assessed AI progress. The ALPAC Report (1966) criticized machine translation research, concluding it was slower, less accurate, and more costly than human translation. The Lighthill Report (1973) argued AI had failed to address the "combinatorial explosion" problem in scaling to real-world complexity.</p>
+                            <p class="key-figures">Key Figures: Sir James Lighthill, ALPAC Committee</p>
+                            <p class="significance">Led to drastic cuts in government funding, particularly for machine translation in the US and general AI research in the UK, contributing to the first AI Winter (mid-1970s to early 1980s).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">1970s-1980s</span>
                     <div class="timeline-content">
                         <span class="date">1970s-1980s</span>
                         <div class="card">
                             <h3>First AI Winter</h3>
-                            <p>A period of reduced funding and interest in AI research following unmet expectations, critical reports like the 1973 Lighthill Report in the UK, and the realization that early techniques couldn't scale to handle real-world complexity.</p>
-                            <p class="key-figures">Key Figures: Various</p>
-                            <p class="significance">Significance: Demonstrated the dangers of overpromising in AI and the challenges of reconciling ambitious goals with technological limitations. Led to more focused, practical approaches.</p>
+                            <p>Period of reduced funding following unmet expectations and critical reports. DARPA shifted focus from general AI research to mission-oriented projects with clear military applications. This led to a significant contraction of the field and a shift toward more focused, practical approaches.</p>
+                            <p class="significance">Served as a crucial reality check for the field, exposing limitations of early approaches and pruning unrealistic expectations. This cooling period allowed researchers to confront fundamental challenges in learning, scalability, and real-world complexity.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">1980s</span>
                     <div class="timeline-content">
                         <span class="date">1980s</span>
                         <div class="card">
-                            <h3>Expert Systems Boom</h3>
-                            <p>AI saw commercial success with expert systems—programs using knowledge bases of human-expert rules to solve domain-specific problems like medical diagnosis (MYCIN) and computer configuration (XCON).</p>
-                            <p class="key-figures">Key Figures: Various (e.g., MYCIN at Stanford)</p>
-                            <p class="significance">Significance: Demonstrated practical business value for AI in specific domains, but later revealed limitations in scalability, knowledge acquisition, and adaptability.</p>
+                            <h3>Expert Systems</h3>
+                            <p>Programs using knowledge bases of human-expert rules for domain-specific problems. Notable systems included DENDRAL (molecular structure analysis), MYCIN (medical diagnosis), and XCON/R1 (computer configuration). These systems demonstrated commercial viability, particularly R1/XCON which saved Digital Equipment Corporation millions.</p>
+                            <p class="key-figures">Key Figures: Edward Feigenbaum, Bruce Buchanan, Joshua Lederberg (DENDRAL); Edward Shortliffe (MYCIN)</p>
+                            <p class="significance">Demonstrated practical business value for AI in specific domains, leading to an industry boom. However, limitations including the "knowledge acquisition bottleneck," brittleness in handling unexpected cases, and inability to learn from experience would eventually lead to disillusionment.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">1980</span>
                     <div class="timeline-content">
                         <span class="date">1980</span>
                         <div class="card">
                             <h3>Neocognitron</h3>
-                            <p>Kunihiko Fukushima developed the Neocognitron, an early hierarchical neural network inspired by the visual cortex, featuring alternating feature extraction and pooling layers.</p>
+                            <p>Kunihiko Fukushima developed this early hierarchical neural network inspired by the visual cortex. It featured alternating layers for feature extraction (S-layers) and spatial invariance (C-layers), demonstrating the power of local receptive fields and hierarchical feature learning.</p>
                             <p class="key-figures">Key Figure: Kunihiko Fukushima</p>
-                            <p class="significance">Significance: Pioneered core architectural principles of modern Convolutional Neural Networks (CNNs), though it lacked the backpropagation training method needed for broader success.</p>
+                            <p class="significance">Pioneered core architectural principles of modern Convolutional Neural Networks (CNNs), laying groundwork for later breakthroughs in computer vision with deep learning.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">1987-1990s</span>
                     <div class="timeline-content">
                         <span class="date">1987-1990s</span>
                         <div class="card">
                             <h3>Second AI Winter</h3>
-                            <p>A second period of disillusionment triggered by the collapse of the specialized AI hardware market (LISP machines) and the failure of expert systems to meet commercial expectations and scale effectively.</p>
-                            <p class="key-figures">Key Figures: Various</p>
-                            <p class="significance">Significance: Demonstrated the gap between AI principles and commercial viability, creating an opening for the revival of connectionist approaches and statistical methods.</p>
+                            <p>A second period of reduced funding and interest followed the collapse of the specialized AI hardware market (LISP machines) and growing disillusionment with expert systems. Japan's ambitious Fifth Generation Computer Systems project (1982-1992) failed to achieve its revolutionary goals despite significant investment.</p>
+                            <p class="significance">Created opening for revival of connectionist approaches and statistical methods. The fall of symbolic AI's commercial dominance cleared space for the eventual revival of neural networks and machine learning paradigms.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Neural Network Renaissance (1980s-1990s) -->
-        <section id="neural" class="era-section fade-in">
-            <h2 class="era-title">The Neural Network Renaissance and Algorithmic Advances</h2>
-            <p class="era-description">The 1980s and 1990s saw a revival of neural networks through key algorithmic breakthroughs, alongside the development of alternative machine learning paradigms that offered different approaches to learning from data.</p>
+        <!-- Neural Network Renaissance -->
+        <section id="neural" class="era-section">
+            <h2 class="era-title">Neural Network Renaissance</h2>
+            <p class="era-description">Revival of neural networks through key algorithmic breakthroughs and architectural innovations</p>
 
             <div class="timeline-container">
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">1986</span>
                     <div class="timeline-content">
                         <span class="date">1986</span>
                         <div class="card">
-                            <h3>Backpropagation Popularization</h3>
-                            <p>David Rumelhart, Geoffrey Hinton, and Ronald Williams published highly influential papers on backpropagation in the "Parallel Distributed Processing" volumes, providing an efficient method for training multi-layer neural networks.</p>
-                            <p class="key-figures">Key Figures: David Rumelhart, Geoffrey Hinton, Ronald Williams</p>
-                            <p class="significance">Significance: Enabled the training of deep neural networks by efficiently calculating gradients, overcoming the key limitation highlighted by Minsky and Papert and revitalizing connectionist research.</p>
+                            <h3>Backpropagation and Deep Learning Foundations</h3>
+                            <p>A major breakthrough came with the 1986 publication of the backpropagation algorithm for training multi-layer neural networks. David Rumelhart, Geoffrey Hinton, and Ronald Williams (as part of the Parallel Distributed Processing project) showed how to efficiently compute gradients for each weight in a multi-layer perceptron by propagating errors backward from the output.</p>
+                            <p class="key-figures">Key Figures: David Rumelhart, Geoffrey Hinton, Ronald Williams, Paul Werbos (earlier work)</p>
+                            <p class="significance">This overcame the training obstacle identified in 1969 and led to a flurry of research in neural networks. In their paper "Learning representations by back-propagating errors" (1986), they demonstrated that networks with hidden layers could learn internal representations for tasks like encoding XOR. Backpropagation remains the fundamental learning algorithm still used (with many enhancements) to train today's LLMs on enormous datasets using stochastic gradient descent. The 1986 PDP volumes also emphasized distributed representations – a principle directly inherited by word embeddings in neural language models.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">1989/1998</span>
                     <div class="timeline-content">
                         <span class="date">1989/1998</span>
                         <div class="card">
                             <h3>LeNet-5</h3>
-                            <p>Yann LeCun and colleagues at AT&T Bell Labs developed LeNet-5, a convolutional neural network trained with backpropagation that successfully recognized handwritten digits and demonstrated practical application of CNNs.</p>
+                            <p>Yann LeCun and colleagues refined the Neocognitron architecture and combined it with backpropagation to create LeNet-5, a convolutional neural network for handwritten digit recognition. It featured stacked layers of convolution, pooling, and fully connected layers with weight sharing and hierarchical feature extraction.</p>
                             <p class="key-figures">Key Figure: Yann LeCun</p>
-                            <p class="significance">Significance: Established the fundamental architecture of modern CNNs with convolutional layers, pooling, and fully connected layers, proving their effectiveness for real-world computer vision tasks.</p>
+                            <p class="significance">Established the foundational CNN architecture for computer vision, demonstrating remarkable success on the MNIST handwritten digit dataset. Key principles like weight sharing and hierarchical feature learning remain central to modern CNNs.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">1995</span>
                     <div class="timeline-content">
                         <span class="date">1995</span>
                         <div class="card">
-                            <h3>Support Vector Machines (Soft Margin)</h3>
-                            <p>Corinna Cortes and Vladimir Vapnik introduced soft margin SVMs and popularized the kernel trick, allowing effective classification of non-linearly separable data through implicit mapping to higher dimensional spaces.</p>
-                            <p class="key-figures">Key Figures: Corinna Cortes, Vladimir Vapnik</p>
-                            <p class="significance">Significance: Provided a powerful alternative to neural networks with strong theoretical foundations in statistical learning theory, becoming the dominant classification method until the deep learning revival.</p>
+                            <h3>Support Vector Machines</h3>
+                            <p>Developed systematically by Vladimir Vapnik and colleagues at AT&T Bell Labs, SVMs aim to find the optimal hyperplane that separates data points with the maximal margin. The "kernel trick" allows them to perform non-linear classification by implicitly mapping data to higher dimensions.</p>
+                            <p class="key-figures">Key Figures: Vladimir Vapnik, Corinna Cortes</p>
+                            <p class="significance">Became the dominant classification method before the deep learning revolution due to their strong theoretical foundations, good generalization performance, and effectiveness with high-dimensional data and smaller datasets.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">1997</span>
                     <div class="timeline-content">
                         <span class="date">1997</span>
                         <div class="card">
-                            <h3>Long Short-Term Memory (LSTM)</h3>
-                            <p>Sepp Hochreiter and Jürgen Schmidhuber introduced LSTM networks, a recurrent neural network architecture with specialized gating mechanisms to overcome the vanishing gradient problem in sequence modeling.</p>
+                            <h3>LSTM (Long Short-Term Memory)</h3>
+                            <p>Sepp Hochreiter and Jürgen Schmidhuber designed LSTMs to address the vanishing gradient problem in standard recurrent neural networks, which made it difficult to learn long-range dependencies in sequences. LSTMs use a memory cell with gating mechanisms to control information flow.</p>
                             <p class="key-figures">Key Figures: Sepp Hochreiter, Jürgen Schmidhuber</p>
-                            <p class="significance">Significance: Enabled the modeling of long-range dependencies in sequential data, making neural networks effective for tasks like language modeling, speech recognition, and machine translation.</p>
+                            <p class="significance">Enabled modeling of long-range dependencies in sequential data, becoming the workhorse for sequence tasks like language modeling, machine translation, and speech recognition for over a decade before Transformers emerged.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">1984</span>
+                    <span class="timeline-year">2006</span>
                     <div class="timeline-content">
-                        <span class="date">1984</span>
+                        <span class="date">2006</span>
                         <div class="card">
-                            <h3>Classification and Regression Trees (CART)</h3>
-                            <p>Leo Breiman, Jerome Friedman, Richard Olshen, and Charles Stone published their work on CART, a decision tree algorithm capable of handling both classification and regression tasks with principled approaches to splitting and pruning.</p>
-                            <p class="key-figures">Key Figures: Leo Breiman, Jerome Friedman, Richard Olshen, Charles Stone</p>
-                            <p class="significance">Significance: Established decision trees as a major paradigm in machine learning, offering interpretable models and laying groundwork for ensemble methods like Random Forests and Gradient Boosting.</p>
+                            <h3>Deep Learning Revival</h3>
+                            <p>Geoffrey Hinton and colleagues showed that deep neural networks could be effectively pre-trained using a layer-by-layer unsupervised approach (Deep Belief Networks with greedy layer-wise training), helping overcome the vanishing gradient problem that had plagued earlier attempts at training very deep networks.</p>
+                            <p class="key-figures">Key Figures: Geoffrey Hinton, Ruslan Salakhutdinov</p>
+                            <p class="significance">Sparked renewed interest in deep neural networks by demonstrating effective training methods. This breakthrough, combined with increasing computational power and data availability, set the stage for the deep learning revolution that followed.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Data and Hardware Era (1990s-2010s) -->
-        <section id="data-hardware" class="era-section fade-in">
-            <h2 class="era-title">Fueling the Fire: Data and Hardware</h2>
-            <p class="era-description">The dramatic acceleration of AI progress, particularly the deep learning revolution starting around 2012, was heavily fueled by two crucial enabling factors: the availability of massive datasets and the development of powerful parallel computing hardware.</p>
+        <!-- Data and Hardware Era -->
+        <section id="data-hardware" class="era-section">
+            <h2 class="era-title">Data & Hardware</h2>
+            <p class="era-description">Enabling factors for deep learning: large datasets and computational power</p>
 
             <div class="timeline-container">
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">1998</span>
                     <div class="timeline-content">
                         <span class="date">1998</span>
                         <div class="card">
                             <h3>MNIST Dataset</h3>
-                            <p>Yann LeCun and colleagues released the MNIST dataset of handwritten digits, providing a standardized benchmark with 60,000 training and 10,000 test images for evaluating image classification algorithms.</p>
+                            <p>A benchmark dataset of handwritten digits with 60,000 training and 10,000 test images, created by Yann LeCun and colleagues at AT&T Bell Labs. It became a standard testbed for evaluating machine learning algorithms, particularly in computer vision.</p>
                             <p class="key-figures">Key Figure: Yann LeCun</p>
-                            <p class="significance">Significance: Became one of the most widely used benchmark datasets, standardizing evaluation and fostering comparative research in machine learning for years.</p>
+                            <p class="significance">Standardized evaluation for machine learning algorithms and helped popularize the benchmarking approach to measuring progress. The consistent use of shared datasets allowed direct comparison of different methods.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">2007</span>
                     <div class="timeline-content">
                         <span class="date">2007</span>
                         <div class="card">
-                            <h3>CUDA: GPUs for General Computing</h3>
-                            <p>NVIDIA released CUDA (Compute Unified Device Architecture), making general-purpose computing on GPUs accessible to developers and enabling massive parallelization of computational tasks.</p>
-                            <p class="key-figures">Key Players: NVIDIA (Ian Buck et al.)</p>
-                            <p class="significance">Significance: Provided the hardware acceleration necessary for training deep neural networks in reasonable timeframes, directly enabling the deep learning revolution.</p>
+                            <h3>CUDA</h3>
+                            <p>NVIDIA's Compute Unified Device Architecture (CUDA) made GPU computing accessible for general-purpose tasks beyond graphics rendering. GPUs' massively parallel architecture proved ideal for the matrix multiplications central to neural network training.</p>
+                            <p class="key-players">Key Players: NVIDIA (Ian Buck et al.)</p>
+                            <p class="significance">Provided essential hardware acceleration for training neural networks, reducing training times from months to days or hours. GPU computing became a fundamental enabler of the deep learning revolution.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">2009</span>
                     <div class="timeline-content">
                         <span class="date">2009</span>
                         <div class="card">
-                            <h3>ImageNet Dataset</h3>
-                            <p>Fei-Fei Li and colleagues introduced ImageNet, a massive database containing millions of labeled images across thousands of categories, providing unprecedented scale and diversity for training computer vision models.</p>
+                            <h3>ImageNet</h3>
+                            <p>A database with over 14 million labeled images across more than 20,000 categories, created by Fei-Fei Li and colleagues. The associated ImageNet Large Scale Visual Recognition Challenge (ILSVRC) began in 2010, becoming the premier benchmark for computer vision models.</p>
                             <p class="key-figures">Key Figures: Fei-Fei Li, Jia Deng et al.</p>
-                            <p class="significance">Significance: Catalyzed the deep learning revolution by providing the large-scale training data necessary for deep neural networks to demonstrate their full potential.</p>
+                            <p class="significance">Provided large-scale training data for neural networks, pushing researchers to develop models that could handle real-world visual complexity and diversity. The scale of ImageNet revealed the true potential of deep learning when sufficient data was available.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">2012</span>
                     <div class="timeline-content">
                         <span class="date">2012</span>
                         <div class="card">
-                            <h3>AlexNet Victory</h3>
-                            <p>A deep convolutional neural network designed by Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton dramatically outperformed all previous approaches in the ImageNet Large Scale Visual Recognition Challenge (ILSVRC).</p>
+                            <h3>AlexNet</h3>
+                            <p>A deep CNN architecture that won the ImageNet competition by a significant margin, reducing the top-5 error rate from 26% to 15.3%. Trained on GPUs, it used ReLU activations, dropout regularization, and data augmentation to manage overfitting with a large model (60 million parameters).</p>
                             <p class="key-figures">Key Figures: Alex Krizhevsky, Ilya Sutskever, Geoffrey Hinton</p>
-                            <p class="significance">Significance: Marked the watershed moment for deep learning, demonstrating the power of deep CNNs trained on GPUs with large datasets and igniting the modern deep learning revolution.</p>
+                            <p class="significance">Watershed moment that ignited the deep learning revolution. AlexNet's dramatic performance improvement demonstrated the power of deep convolutional networks trained on large datasets with GPUs, changing the direction of computer vision and AI research.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2020-2022</span>
+                    <span class="timeline-year">2012-2015</span>
                     <div class="timeline-content">
-                        <span class="date">2020-2022</span>
+                        <span class="date">2012-2015</span>
                         <div class="card">
-                            <h3>Scaling Laws</h3>
-                            <p>Researchers at OpenAI (Kaplan et al.) and DeepMind (Hoffmann et al.) published empirical studies showing how model performance scales predictably with compute, data, and parameter count, guiding resource allocation for training large models.</p>
-                            <p class="key-figures">Key Teams: Kaplan et al. (OpenAI), Hoffmann et al. (DeepMind)</p>
-                            <p class="significance">Significance: Provided empirical frameworks for understanding how to optimize model training, directly influencing the development strategy for increasingly capable LLMs.</p>
+                            <h3>Deep Learning Frameworks</h3>
+                            <p>Open-source frameworks like Caffe (2013), Theano, Torch, TensorFlow (2015), and later PyTorch made deep learning accessible to a wider research community by providing high-level APIs, automatic differentiation, and GPU acceleration.</p>
+                            <p class="key-players">Key Players: Google Brain, Facebook AI Research, Berkeley Vision and Learning Center</p>
+                            <p class="significance">Democratized deep learning research by reducing the implementation burden, allowing researchers to focus on architecture innovation rather than low-level optimization. These frameworks accelerated the research cycle and expanded participation in AI development.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- NLP Revolution Era (1990s-2010s) -->
-        <section id="nlp" class="era-section fade-in">
-            <h2 class="era-title">Language Takes Center Stage</h2>
-            <p class="era-description">While computer vision saw dramatic progress, parallel advancements in Natural Language Processing moved from rule-based approaches to statistical methods and neural techniques for representing and processing language.</p>
+        <!-- NLP Revolution Era -->
+        <section id="nlp" class="era-section">
+            <h2 class="era-title">NLP Revolution</h2>
+            <p class="era-description">Evolution from rule-based to neural approaches in natural language processing</p>
 
             <div class="timeline-container">
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">1990s</span>
                     <div class="timeline-content">
                         <span class="date">1990s</span>
                         <div class="card">
-                            <h3>Statistical NLP & N-gram Models</h3>
-                            <p>The field of NLP shifted from rule-based approaches to statistical methods, with n-gram language models that predict word probabilities based on preceding words becoming the dominant paradigm.</p>
-                            <p class="key-figures">Key Figures: Various researchers</p>
-                            <p class="significance">Significance: Established the data-driven paradigm for language processing that continues in modern LLMs, focusing on learning statistical patterns directly from text corpora.</p>
+                            <h3>Statistical NLP</h3>
+                            <p>Shift from rule-based to statistical methods using n-gram language models, Hidden Markov Models (HMMs), and statistical machine translation. This approach leveraged large text corpora and probabilistic models to address the complexity and ambiguity of natural language.</p>
+                            <p class="key-figures">Key Figures: Frederick Jelinek, Robert Mercer (IBM); Eugene Charniak, Christopher Manning</p>
+                            <p class="significance">Established the data-driven paradigm for language processing that would later evolve into neural NLP. Demonstrated that models trained on large amounts of text data could outperform hand-crafted rule systems for many language tasks.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-year">2003</span>
+                    <div class="timeline-content">
+                        <span class="date">2003</span>
+                        <div class="card">
+                            <h3>Neural Language Models</h3>
+                            <p>Yoshua Bengio and colleagues introduced neural network language models that learned distributed representations of words and could model sequences with less data sparsity than n-gram models. This approach allowed for better generalization across similar contexts.</p>
+                            <p class="key-figures">Key Figures: Yoshua Bengio, Réjean Ducharme, Pascal Vincent</p>
+                            <p class="significance">Laid the groundwork for neural approaches to language modeling, showing how neural networks could better capture semantic similarities and relationships between words compared to traditional statistical methods.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">2013</span>
                     <div class="timeline-content">
                         <span class="date">2013</span>
                         <div class="card">
                             <h3>Word2Vec</h3>
-                            <p>Tomas Mikolov and colleagues at Google introduced Word2Vec, providing computationally efficient models (Skip-gram and CBOW) for learning high-quality word embeddings that capture semantic relationships between words.</p>
+                            <p>Tomas Mikolov and colleagues at Google developed efficient models for learning word embeddings (Word2Vec) using continuous bag-of-words (CBOW) and skip-gram architectures. These vector representations captured semantic relationships (e.g., "king - man + woman ≈ queen").</p>
                             <p class="key-figures">Key Figure: Tomas Mikolov (Google)</p>
-                            <p class="significance">Significance: Enabled words to be represented as dense vectors in ways that preserved semantic meaning, with relationships between concepts captured through vector arithmetic.</p>
+                            <p class="significance">Enabled words to be represented as dense vectors preserving meaning and semantic relationships. Word embeddings became a fundamental building block for neural NLP models, improving performance across a wide range of tasks.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">2014</span>
                     <div class="timeline-content">
                         <span class="date">2014</span>
                         <div class="card">
-                            <h3>GloVe</h3>
-                            <p>Jeffrey Pennington, Richard Socher, and Christopher Manning released Global Vectors for Word Representation (GloVe), combining global matrix factorization and local context window methods for learning word embeddings.</p>
-                            <p class="key-figures">Key Figures: Jeffrey Pennington, Richard Socher, Christopher Manning (Stanford)</p>
-                            <p class="significance">Significance: Provided an alternative approach to word embeddings that leveraged global co-occurrence statistics, further advancing the field of representation learning for NLP.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item fade-in">
-                    <div class="timeline-dot"></div>
-                    <span class="timeline-year">2014</span>
-                    <div class="timeline-content">
-                        <span class="date">2014</span>
-                        <div class="card">
-                            <h3>Sequence-to-Sequence (Seq2Seq) Models</h3>
-                            <p>Two influential papers introduced the encoder-decoder framework using RNNs for mapping input sequences to output sequences of potentially different lengths, revolutionizing machine translation and other sequence transduction tasks.</p>
+                            <h3>Seq2Seq Models</h3>
+                            <p>Encoder-decoder framework for mapping input sequences to output sequences, developed independently by Sutskever et al. at Google and Cho et al. These models used RNNs (often LSTMs) to encode an input sequence into a fixed-length vector, then decode it into a target sequence.</p>
                             <p class="key-figures">Key Figures: Ilya Sutskever, Oriol Vinyals, Quoc Le (Google); Kyunghyun Cho et al.</p>
-                            <p class="significance">Significance: Provided an end-to-end neural approach to sequence transformation tasks, replacing complex pipelines with a single trainable model.</p>
+                            <p class="significance">Provided an end-to-end neural approach to sequence transformation tasks like machine translation, summarization, and question answering. Demonstrated that neural methods could surpass traditional statistical approaches for these tasks.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">2014</span>
                     <div class="timeline-content">
                         <span class="date">2014</span>
                         <div class="card">
                             <h3>Attention Mechanism</h3>
-                            <p>Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio introduced the attention mechanism for neural machine translation, allowing models to selectively focus on different parts of the input sequence when generating each output token.</p>
+                            <p>Bahdanau, Cho, and Bengio introduced the attention mechanism, allowing models to focus on different parts of the input when generating each element of the output. This addressed the fixed-length context bottleneck in standard Seq2Seq models and enabled handling of longer sequences.</p>
                             <p class="key-figures">Key Figures: Dzmitry Bahdanau, Kyunghyun Cho, Yoshua Bengio</p>
-                            <p class="significance">Significance: Overcame the fixed-length context vector bottleneck in Seq2Seq models and became a fundamental component of modern neural architectures, paving the way for the Transformer.</p>
+                            <p class="significance">Overcame fixed-length context bottleneck in Seq2Seq models and provided a precursor to the self-attention mechanism in Transformers. Attention allowed models to establish direct connections between related elements regardless of their sequence distance.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Transformer Era (Mid 2010s - Present) -->
-        <section id="transformers" class="era-section fade-in">
-            <h2 class="era-title">The Transformer Era and Rise of LLMs</h2>
-            <p class="era-description">The mid-2010s marked a pivotal turning point with the introduction of the Transformer architecture, which overcame key limitations of previous sequence models and paved the way for the development of increasingly powerful Large Language Models.</p>
+        <!-- Transformer Era -->
+        <section id="transformers" class="era-section">
+            <h2 class="era-title">Transformers & LLMs</h2>
+            <p class="era-description">The rise of transformer-based large language models with unprecedented capabilities</p>
 
             <div class="timeline-container">
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">2017</span>
                     <div class="timeline-content">
                         <span class="date">2017</span>
                         <div class="card">
                             <h3>Transformer Architecture</h3>
-                            <p>Researchers at Google introduced the Transformer in their paper "Attention Is All You Need," presenting an architecture based solely on self-attention mechanisms without recurrence or convolutions, enabling unprecedented parallelization.</p>
-                            <p class="key-figures">Key Figures: Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan Gomez, Łukasz Kaiser, Illia Polosukhin (Google)</p>
-                            <p class="significance">Significance: Revolutionized sequence modeling across NLP and beyond by eliminating sequential processing bottlenecks and enabling effective modeling of long-range dependencies.</p>
+                            <p>In June 2017, Vaswani et al. published "Attention Is All You Need," introducing the Transformer architecture. This model dispensed with recurrent networks entirely and relied solely on self-attention mechanisms to process sequences in parallel. The original Transformer had ~65 million parameters in the encoder and a similar size decoder (about 110M total) and achieved state-of-the-art in English–German and English–French translation.</p>
+                            <p class="key-figures">Key Figures: Ashish Vaswani, Niki Parmar, Jakob Uszkoreit et al. (Google)</p>
+                            <p class="significance">The significance of this cannot be overstated: Transformers are far more parallelizable than RNNs (allowing training on much more data), and the self-attention mechanism captures long-range dependencies with ease. The Transformer became the backbone of modern LLMs: virtually all large language models (GPT, BERT, etc.) use the Transformer architecture or its variants. It enabled training of unprecedentedly large models by scaling efficiently on GPUs/TPUs.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <span class="timeline-year">2018</span>
                     <div class="timeline-content">
                         <span class="date">2018</span>
                         <div class="card">
-                            <h3>BERT</h3>
-                            <p>Jacob Devlin and colleagues at Google AI introduced BERT (Bidirectional Encoder Representations from Transformers), a pre-trained bidirectional Transformer encoder using Masked Language Modeling to understand context from both directions.</p>
-                            <p class="key-figures">Key Figures: Jacob Devlin et al. (Google)</p>
-                            <p class="significance">Significance: Revolutionized NLP by demonstrating the power of deep bidirectional pre-training followed by task-specific fine-tuning, achieving state-of-the-art results across multiple benchmarks.</p>
+                            <h3>Pretrained Language Models (ELMo, BERT, GPT)</h3>
+                            <p>2018 was a transformative year for NLP, marked by the rise of pretrained LMs that could be fine-tuned for various tasks. In early 2018, Peters et al. introduced ELMo, using a deep bi-directional LSTM for context-sensitive word embeddings. In June 2018, OpenAI released GPT-1 (117M parameters), a unidirectional Transformer decoder trained on BookCorpus for next-word prediction. Late 2018 saw BERT by Google, a 12-layer Transformer encoder (110M parameters for BERT-base) trained on 3.3 billion words with masked language modeling.</p>
+                            <p class="key-figures">Key Organizations: Google (BERT), OpenAI (GPT), Allen Institute (ELMo)</p>
+                            <p class="significance">These models demonstrated that massive unsupervised pretraining yields "universal" language models that can be adapted to many tasks with excellent results. BERT-Large (340M parameters) showed clear scaling effects. The paradigm shifted: NLP tasks no longer required task-specific architectures; instead, one could "pretrain on general text, fine-tune on the task," which is the cornerstone of today's LLM usage. These models are direct predecessors to GPT-2, GPT-3, etc., differing mainly in scale and training data size.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2018-2020</span>
+                    <span class="timeline-year">2019</span>
                     <div class="timeline-content">
-                        <span class="date">2018-2020</span>
+                        <span class="date">2019</span>
                         <div class="card">
-                            <h3>GPT Series (GPT-1, GPT-2, GPT-3)</h3>
-                            <p>OpenAI developed increasingly large decoder-only Transformer models pre-trained on vast text corpora, culminating in GPT-3 with 175 billion parameters, demonstrating remarkable capabilities in few-shot learning and text generation.</p>
+                            <h3>Scaling Parameters and Data (GPT-2, Megatron, T5)</h3>
+                            <p>The trend in 2019 was "bigger is better" for language models. In February 2019, OpenAI unveiled GPT-2 (1.5 billion parameters), trained on 8 million high-quality web pages. It generated remarkably coherent text, so convincing that OpenAI initially withheld the full model due to misuse concerns. Google released Bidirectional Transformer XL (XLNet), while NVIDIA's Megatron-LM reached 8.3 billion parameters. Google's T5 (Text-to-Text Transfer Transformer) in late 2019 scaled to 11 billion parameters, treating every NLP task as a text-to-text problem.</p>
+                            <p class="key-figures">Key Organizations: OpenAI, Google, NVIDIA</p>
+                            <p class="significance">All these efforts pointed in the same direction: more data + larger models = better language understanding. By end of 2019, the community had embraced a scaling law mindset: if you increase compute, model size, and data, you continue to get improved results. This set the stage for truly gigantic models in the next years. Additionally, models like RoBERTa by Facebook showed that BERT's performance could be significantly improved simply by training longer on more data.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-year">2020</span>
+                    <div class="timeline-content">
+                        <span class="date">2020</span>
+                        <div class="card">
+                            <h3>GPT-3 and the 100+ Billion Parameter Frontier</h3>
+                            <p>In May 2020, OpenAI introduced GPT-3, a landmark in LLM development with 175 billion parameters, over 10× larger than GPT-2. It was trained on an unprecedented dataset of about 300 billion tokens from the internet, books, Wikipedia, and other sources. The context window was expanded to 2048 tokens. GPT-3 demonstrated remarkable zero-shot and few-shot learning abilities without fine-tuning.</p>
                             <p class="key-figures">Key Organization: OpenAI</p>
-                            <p class="significance">Significance: Demonstrated the power of scaling transformer-based language models, revealing surprising emergent abilities and setting the template for modern LLMs with strong generalization capabilities.</p>
+                            <p class="significance">GPT-3's release (with the paper "Language Models are Few-Shot Learners") captured public imagination due to the model's fluent output and versatility. It confirmed the scaling laws posited by Kaplan et al. (OpenAI, 2020): that performance improves log-linearly with model size, data size, and compute. Additionally in 2020, we saw Microsoft's Turing-NLG (17B) model and several other 10B+ models, showing a clear trend toward massive scale. These giant models exhibited emergent abilities – capabilities not present in smaller versions – suggesting that scale itself could lead to qualitatively different behavior.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item fade-in">
+                <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <span class="timeline-year">2022-2023</span>
+                    <span class="timeline-year">2021</span>
                     <div class="timeline-content">
-                        <span class="date">2022-2023</span>
+                        <span class="date">2021</span>
                         <div class="card">
-                            <h3>The LLM Revolution</h3>
-                            <p>The release of powerful, user-friendly AI systems like ChatGPT, GPT-4, Claude, and open source models like Llama brought large language models to mainstream awareness, sparking widespread adoption and new applications.</p>
-                            <p class="key-figures">Key Organizations: OpenAI, Google, Anthropic, Meta, and other AI labs</p>
-                            <p class="significance">Significance: Made powerful AI capabilities accessible to millions of users, demonstrated the practical value of LLMs across diverse domains, and sparked global conversations about AI's potential and risks.</p>
+                            <h3>Model Scaling and Multimodality</h3>
+                            <p>2021 saw multiple organizations push LLM scale even further. Google built Switch-C Transformer with 1.6 trillion parameters using a Mixture-of-Experts approach. Microsoft and NVIDIA announced Megatron-Turing NLG 530B, a 530-billion parameter dense Transformer. Chinese research institutes also entered the race with the WuDao project announced in June 2021. DeepMind contributed with Gopher (280B) in late 2021. Multimodal models also emerged, with OpenAI's CLIP learning joint text-image representations and DALL-E creating images from text prompts.</p>
+                            <p class="key-figures">Key Organizations: Google, Microsoft/NVIDIA, DeepMind, OpenAI, Chinese Academy of Sciences</p>
+                            <p class="significance">These developments showed that scaling could continue through architectural innovations like Mixture-of-Experts (activating only a subset of parameters for any given input). This allowed trillion-parameter scales without proportional increases in computation. DeepMind's Chinchilla paper (March 2022, based on 2021 research) argued that many models were undertrained for their size and established a new optimal ratio between model size and training data, which has heavily influenced subsequent models.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-year">2022</span>
+                    <div class="timeline-content">
+                        <span class="date">2022</span>
+                        <div class="card">
+                            <h3>Instruction Tuning and Alignment (RLHF)</h3>
+                            <p>A key focus in 2022 was making LLMs more helpful and harmless for user-facing applications. In January 2022, OpenAI released InstructGPT, which was GPT-3 fine-tuned with human feedback to better follow user instructions. They collected comparison data from human labelers, trained a reward model, and then optimized GPT-3 using reinforcement learning (specifically PPO) to produce outputs that humans preferred.</p>
+                            <p class="key-figures">Key Organizations: OpenAI, Anthropic, Google</p>
+                            <p class="significance">Even a 1.3B parameter InstructGPT model, after this process, was preferred to the 175B GPT-3 by users for following instructions. This showed that quality is not only about size, but also about alignment with user intent. Reinforcement Learning from Human Feedback (RLHF) became a crucial component in developing deployable AI assistants. Google's FLAN approach aggregated hundreds of tasks with instructions to fine-tune PaLM, while Anthropic introduced Constitutional AI, fine-tuning a model with a set of principles guiding its behavior.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-year">Late 2022</span>
+                    <div class="timeline-content">
+                        <span class="date">Late 2022</span>
+                        <div class="card">
+                            <h3>ChatGPT and Public Adoption</h3>
+                            <p>OpenAI launched ChatGPT in November 2022, based on GPT-3.5 fine-tuned specifically for multi-turn dialogue and enhanced with RLHF (Reinforcement Learning from Human Feedback). Deployed as a free chat interface, it reached tens of millions of users within days – becoming the fastest-growing consumer application in history at that time.</p>
+                            <p class="key-figures">Key Organization: OpenAI</p>
+                            <p class="significance">ChatGPT brought LLMs into mainstream awareness by providing a conversational interface that could answer questions, write essays and emails, assist with coding, and more. It proved that LLMs are ready for prime time if properly aligned with human intent. Its success spurred major tech companies to accelerate their AI roadmaps, with Google, Baidu, and others scrambling to announce chatbot products in early 2023.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-year">March 2023</span>
+                    <div class="timeline-content">
+                        <span class="date">March 2023</span>
+                        <div class="card">
+                            <h3>GPT-4 (Multimodal and Advanced Reasoning)</h3>
+                            <p>OpenAI released GPT-4 in March 2023, representing the next generation after GPT-3. GPT-4 is a multimodal model that accepts both text and image inputs, with significantly improved reasoning abilities. It scores in the top percentiles of many standardized tests and demonstrates substantially better performance at complex tasks like coding, mathematics, and logical reasoning.</p>
+                            <p class="key-figures">Key Organization: OpenAI</p>
+                            <p class="significance">GPT-4 pushed the frontier of quality, showing that careful scaling plus alignment can yield an AI model that is measurably more capable and reliable. It introduced vision capabilities that can describe images, interpret graphs, and solve visual problems. With a larger context window (up to 32k tokens), improved factual accuracy, and better instruction following, GPT-4 extended the usefulness of LLMs into more critical and complex domains.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-year">Feb-July 2023</span>
+                    <div class="timeline-content">
+                        <span class="date">Feb-July 2023</span>
+                        <div class="card">
+                            <h3>Open-Source LLM Revolution</h3>
+                            <p>In February 2023, Meta AI released LLaMA, a series of efficient models (7B, 13B, 33B, and 65B parameters) trained with the Chinchilla-optimal strategy. When LLaMA's weights leaked in March 2023, it catalyzed an explosion of open-source innovation. Projects like Stanford's Alpaca, Vicuna, and many others quickly fine-tuned LLaMA for instruction following, making ChatGPT-like abilities available on consumer hardware.</p>
+                            <p class="key-figures">Key Organizations: Meta AI, Stanford, Mistral AI, open-source community</p>
+                            <p class="significance">This open-source revolution democratized access to LLM technology and led to rapid improvements. By mid-2023, Meta officially released LLaMA 2 with a permissive license, and new entrants like Mistral AI released high-quality open models. The open ecosystem contributed novel ideas like efficient fine-tuning techniques, specialized models for coding, and methods to run LLMs on modest hardware. This put competitive pressure on commercial providers and ensured AI development was not solely in the hands of a few large labs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-year">2023</span>
+                    <div class="timeline-content">
+                        <span class="date">2023</span>
+                        <div class="card">
+                            <h3>Claude and Other Industrial-Scale Models</h3>
+                            <p>Anthropic released Claude (1 and 2) in 2023 as rivals to ChatGPT. Claude 1 was based on their "Constitutional AI" technique and had a 100k token context window. Claude 2 (July 2023) improved further with around 70B parameters, scoring high on reasoning and coding tasks. Google launched Bard (Feb/May 2023) powered first by LaMDA and then upgraded to PaLM 2, while also developing Gemini, a multimodal model that would later surpass GPT-4 on many benchmarks.</p>
+                            <p class="key-figures">Key Organizations: Anthropic, Google, Alibaba</p>
+                            <p class="significance">The proliferation of multiple competitive models from different organizations demonstrated the industrial-scale commitment to LLMs. Chinese tech companies also accelerated development with models like Alibaba's Qwen series, making AI advancement a truly global effort. Each model brought unique advantages: Claude with ultra-long contexts, PaLM 2 with multilingual skills, and later Gemini with multimodal reasoning.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-year">2023-2024</span>
+                    <div class="timeline-content">
+                        <span class="date">2023-2024</span>
+                        <div class="card">
+                            <h3>Tool Use and Multimodal Integration</h3>
+                            <p>LLMs gained the ability to use external tools and process multiple modalities. OpenAI introduced Plugins (March 2023) allowing ChatGPT to call external APIs, later refined into built-in tools like web browsing and code interpretation. GPT-4 Vision (Sept 2023) added image analysis capabilities. Google's Gemini and other models similarly expanded to understand and reason across text, images, audio, and video.</p>
+                            <p class="key-figures">Key Organizations: OpenAI, Google, Anthropic, Midjourney</p>
+                            <p class="significance">The combination of tool use and multimodal understanding addressed key limitations of LLMs, allowing them to access external knowledge (for factual accuracy), perform calculations, and process visual information. This evolution pointed toward more agentic behavior, where LLMs could serve as reasoning engines coordinating tools and modalities to solve complex problems. Projects like LangChain and frameworks for LLMs to interact with external data sources and tools emerged, making these capabilities accessible to developers.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="timeline-year">2025</span>
+                    <div class="timeline-content">
+                        <span class="date">2025</span>
+                        <div class="card">
+                            <h3>Advanced Models with Step-by-Step Reasoning</h3>
+                            <p>By early 2025, new capabilities were emerging in models like Alibaba's Qwen-3 (released April 2025). This family of models, ranging from 0.6B to a flagship 235B parameters, introduced hybrid capabilities like automatic "deliberation" – the ability to internally chain thoughts to improve reasoning when faced with difficult problems. These models demonstrated continued scaling benefits with 36 trillion tokens of training data across 119 languages.</p>
+                            <p class="key-figures">Key Organizations: Alibaba, Google, OpenAI, Anthropic</p>
+                            <p class="significance">These advanced models incorporated ideas like self-refinement and step-by-step thinking directly into their architecture. By automating the deliberative reasoning process, they achieved better results on complex problems while maintaining the convenience of a single-query interface. The industry continued to see healthy competition between open and closed models, pushing forward both capabilities and accessibility.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- The Future Section -->
-        <section class="future-section fade-in">
+        <!-- Future Section -->
+        <section class="future-section">
             <div class="container">
                 <h2 class="future-title">The Future of AI</h2>
                 <div class="future-content">
-                    <p>The AI timeline continues to unfold at an accelerating pace. Recent years have seen the emergence of multimodal models that can work across text, images, audio, and video. Systems designed with reinforcement learning from human feedback (RLHF) aim to align AI with human values and preferences.</p>
-                    <p>Looking ahead, research frontiers include:</p>
-                    <ul style="text-align: left; margin: 20px 0; list-style-position: inside;">
-                        <li>More efficient architectures that reduce computational requirements</li>
-                        <li>Stronger reasoning capabilities and factual accuracy</li>
-                        <li>Greater interpretability and explainability</li>
-                        <li>More effective alignment with human values and goals</li>
-                        <li>Integration with robotics and the physical world</li>
-                        <li>Novel applications across science, medicine, education, and creativity</li>
+                    <p>Active research frontiers in AI include:</p>
+                    <ul>
+                        <li><strong>Efficiency:</strong> Developing more parameter and computationally efficient architectures (mixture-of-experts, sparse transformers)</li>
+                        <li><strong>Reasoning:</strong> Enhancing logical and mathematical reasoning through techniques like chain-of-thought prompting and tools</li>
+                        <li><strong>Safety:</strong> Improving alignment with human values and developing robust techniques to prevent misuse</li>
+                        <li><strong>Interpretability:</strong> Understanding how models work internally and why they make specific decisions</li>
+                        <li><strong>Multimodal integration:</strong> Combining language with vision, audio, and other modalities for more holistic AI systems</li>
+                        <li><strong>Agents:</strong> Creating systems that can plan, act, and adapt autonomously across diverse environments</li>
+                        <li><strong>Robotics integration:</strong> Connecting language models to physical systems for embodied intelligence</li>
+                        <li><strong>Scientific discovery:</strong> Applying AI to fundamental problems in biology, chemistry, physics, and medicine</li>
                     </ul>
-                    <p>As AI capabilities continue to advance, society faces profound questions about how to ensure these powerful technologies benefit humanity while managing risks and ensuring equitable access. The remarkable journey from Boolean algebra to modern LLMs reminds us that scientific progress builds on generations of cumulative innovation across disciplines.</p>
+                    <p>As AI capabilities advance, society faces profound questions about ensuring equitable benefits while managing risks related to misuse, labor impacts, concentration of power, and long-term alignment with human values and goals.</p>
                 </div>
             </div>
         </section>
@@ -670,7 +935,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>This interactive timeline explores the mathematical concepts, theoretical breakthroughs, algorithmic innovations, hardware advancements, and data paradigms that paved the way for modern artificial intelligence.</p>
+                <p>This timeline explores the mathematical concepts, theoretical breakthroughs, algorithmic innovations, hardware advancements, and data paradigms that enabled modern AI systems.</p>
             </div>
             <div class="footer-copyright">
                 <p>© 2025 AI Timeline Project</p>
@@ -678,6 +943,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
