@@ -2,7 +2,7 @@
 
 An interactive, visually stunning timeline tracing the complete history of artificial intelligence from its mathematical foundations to modern large language models.
 
-![AI Timeline Preview](https://via.placeholder.com/800x400?text=AI+Timeline+Visualization)
+![AI Timeline Preview](https://niral.live/ai-timeline)
 
 ## Overview
 
