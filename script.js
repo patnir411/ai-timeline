@@ -180,7 +180,16 @@
     handleMobileChanges(mobileMediaQuery);
     mobileMediaQuery.addEventListener('change', handleMobileChanges);
     
-    // Add passive: true to improve scroll performance
-    window.addEventListener('scroll', () => {}, { passive: true });
+    // Scroll progress indicator
+    const progressBar = document.getElementById('progress-bar');
+    const updateProgress = () => {
+      if (!progressBar) return;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      progressBar.style.width = scrolled + '%';
+    };
+
+    updateProgress();
+    window.addEventListener('scroll', updateProgress, { passive: true });
   });
 })();

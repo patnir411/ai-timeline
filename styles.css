@@ -39,6 +39,18 @@ body {
   width: 100%;
 }
 
+/* Scroll progress bar */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background: var(--accent);
+  z-index: 2000;
+  transition: width 0.25s ease-out;
+}
+
 /* Header */
 header {
   background: linear-gradient(135deg, var(--accent-darker) 0%, var(--accent) 100%);
@@ -103,6 +115,12 @@ h1 {
   padding: 15px 0;
 }
 
+.timeline-container::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 .timeline-container::before {
   content: '';
   position: absolute;
@@ -155,6 +173,42 @@ html {
   background: var(--accent-lighter);
   box-shadow: 0 0 0 6px rgba(128, 90, 213, 0.3);
   transform: translateX(-50%) scale(1.2);
+}
+
+@media (min-width: 900px) {
+  .timeline-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+
+  .timeline-container::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    width: 50%;
+    padding-left: 0;
+    margin-bottom: 50px;
+  }
+
+  .timeline-item:nth-child(odd) {
+    float: left;
+    padding-right: 40px;
+    text-align: right;
+  }
+
+  .timeline-item:nth-child(even) {
+    float: right;
+    padding-left: 40px;
+    text-align: left;
+  }
+
+  .timeline-dot {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 /* Content */
