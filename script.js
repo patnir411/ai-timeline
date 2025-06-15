@@ -22,6 +22,33 @@
     timelineYears.forEach(year => {
       year.remove(); // Completely remove from DOM instead of just hiding
     });
+    
+    // Add animation order to timeline items for staggered animation
+    const sections = document.querySelectorAll('.era-section');
+    sections.forEach(section => {
+      const items = section.querySelectorAll('.timeline-item');
+      items.forEach((item, index) => {
+        item.style.setProperty('--animation-order', index);
+      });
+    });
+    
+    // Add intersection observer for revealing timeline items when they come into view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    });
+    
+    document.querySelectorAll('.timeline-item').forEach(item => {
+      observer.observe(item);
+    });
   });
   
   // Performance optimizations

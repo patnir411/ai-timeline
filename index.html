@@ -31,14 +31,14 @@
             
             <div class="era-nav">
                 <button class="era-btn active" data-era="all">All</button>
-                <button class="era-btn" data-era="foundations">Foundations</button>
-                <button class="era-btn" data-era="computation">Computation</button>
-                <button class="era-btn" data-era="early-ai">Early AI</button>
-                <button class="era-btn" data-era="ai-winters">AI Winters</button>
-                <button class="era-btn" data-era="neural">Neural Nets</button>
-                <button class="era-btn" data-era="data-hardware">Data/Hardware</button>
-                <button class="era-btn" data-era="nlp">NLP</button>
-                <button class="era-btn" data-era="transformers">Transformers & LLMs</button>
+                <button class="era-btn" data-era="foundations">Foundations (1642-1910)</button>
+                <button class="era-btn" data-era="computation">Computation (1928-1949)</button>
+                <button class="era-btn" data-era="early-ai">Early AI (1950-1959)</button>
+                <button class="era-btn" data-era="ai-winters">AI Winters (1966-1990s)</button>
+                <button class="era-btn" data-era="neural">Neural Nets (1986-2006)</button>
+                <button class="era-btn" data-era="data-hardware">Data/Hardware (1998-2015)</button>
+                <button class="era-btn" data-era="nlp">NLP (1990s-2014)</button>
+                <button class="era-btn" data-era="transformers">Transformers & LLMs (2017-2025)</button>
             </div>
         </div>
     </header>
@@ -60,7 +60,6 @@
             <div class="timeline-container">
                 <div class="timeline-item" data-category="logic">
                     <div class="timeline-dot"></div>
-                    <!-- Removed duplicate year display -->
                     <div class="timeline-content">
                         <span class="date">1854</span>
                         <div class="card">
@@ -87,7 +86,7 @@
 
                 <div class="timeline-item" data-category="logic">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1910-1913</span>
                         <div class="card">
                             <h3>Principia Mathematica</h3>
@@ -100,7 +99,7 @@
 
                 <div class="timeline-item" data-category="probability">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1642-1679</span>
                         <div class="card">
                             <h3>Early Computation and Binary Logic</h3>
@@ -113,7 +112,7 @@
                 
                 <div class="timeline-item" data-category="probability">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">17th-18th Century</span>
                         <div class="card">
                             <h3>Probability Theory</h3>
@@ -126,7 +125,7 @@
 
                 <div class="timeline-item" data-category="calculus">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">Late 17th Century</span>
                         <div class="card">
                             <h3>Calculus</h3>
@@ -137,15 +136,54 @@
                     </div>
                 </div>
 
+                <div class="timeline-item" data-category="logic">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">1854</span>
+                        <div class="card">
+                            <h3>Boolean Algebra</h3>
+                            <p>George Boole published "An Investigation of the Laws of Thought" in 1854, establishing an algebraic system of logic that treated logical propositions with binary values (true/false) and logical operations (AND, OR, NOT).</p>
+                            <p class="key-figures">Key Figure: George Boole</p>
+                            <p class="significance">Laid the foundation for digital circuits and computation. This mathematical logic underpins digital circuit design and binary decision processes used in computer algorithms. A century later, Claude Shannon demonstrated the equivalence of logic circuits to Boolean algebra, linking Boole's work to electronic computing.</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="timeline-item" data-category="algebra">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">Mid-19th Century</span>
                         <div class="card">
                             <h3>Matrix Algebra</h3>
                             <p>Cayley and Sylvester developed matrix algebra, formalizing operations with matrices. Later formalized by Giuseppe Peano (1888) with the first modern definition of a vector space.</p>
                             <p class="key-figures">Key Figures: Arthur Cayley, James Joseph Sylvester, Giuseppe Peano</p>
                             <p class="significance">Essential for representing multi-dimensional data in neural networks. Modern deep learning relies heavily on matrix operations for representing inputs, outputs, and model parameters as vectors and matrices.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-category="logic">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">1879</span>
+                        <div class="card">
+                            <h3>Predicate Calculus (Begriffsschrift)</h3>
+                            <p>German logician Gottlob Frege introduced the first formal predicate calculus in his 1879 book "Begriffsschrift," representing complex statements with quantifiers and variables. Frege's logical notation could express "for all" and "there exists," vastly extending earlier logic.</p>
+                            <p class="key-figures">Key Figure: Gottlob Frege</p>
+                            <p class="significance">By enabling precise reasoning about arbitrary predicates, this innovation provided a formal language for mathematics and later for knowledge representation in AI systems. This laid crucial groundwork for symbolic reasoning capabilities in artificial intelligence.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-category="logic">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">1910-1913</span>
+                        <div class="card">
+                            <h3>Principia Mathematica</h3>
+                            <p>Russell and Whitehead's monumental work attempting to derive all mathematics from logical axioms. This formalized mathematics and systems of inference, though Kurt Gödel later showed the inherent limitations of such formal systems.</p>
+                            <p class="key-figures">Key Figures: Bertrand Russell, Alfred North Whitehead</p>
+                            <p class="significance">Advanced formal systems for mathematical reasoning. The first AI program, Logic Theorist (1956), would later prove theorems from this work.</p>
                         </div>
                     </div>
                 </div>
@@ -160,7 +198,7 @@
             <div class="timeline-container">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1928</span>
                         <div class="card">
                             <h3>Hilbert's Entscheidungsproblem</h3>
@@ -173,7 +211,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1931</span>
                         <div class="card">
                             <h3>Gödel's Incompleteness Theorems</h3>
@@ -186,7 +224,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1936</span>
                         <div class="card">
                             <h3>Church's Lambda Calculus</h3>
@@ -199,7 +237,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1936</span>
                         <div class="card">
                             <h3>Turing Machine & The Halting Problem</h3>
@@ -212,7 +250,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1936-1937</span>
                         <div class="card">
                             <h3>Church-Turing Thesis</h3>
@@ -225,7 +263,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1943</span>
                         <div class="card">
                             <h3>McCulloch-Pitts Neuron</h3>
@@ -238,7 +276,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1945</span>
                         <div class="card">
                             <h3>Von Neumann Architecture</h3>
@@ -251,7 +289,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1948</span>
                         <div class="card">
                             <h3>Information Theory</h3>
@@ -264,7 +302,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1949</span>
                         <div class="card">
                             <h3>Hebbian Learning</h3>
@@ -285,7 +323,7 @@
             <div class="timeline-container">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1950</span>
                         <div class="card">
                             <h3>The Turing Test</h3>
@@ -298,7 +336,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1956</span>
                         <div class="card">
                             <h3>Dartmouth Workshop and Birth of "Artificial Intelligence"</h3>
@@ -311,7 +349,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1956</span>
                         <div class="card">
                             <h3>Logic Theorist</h3>
@@ -324,7 +362,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1957</span>
                         <div class="card">
                             <h3>General Problem Solver (GPS)</h3>
@@ -337,7 +375,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1957-1960</span>
                         <div class="card">
                             <h3>The Perceptron</h3>
@@ -350,7 +388,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1958</span>
                         <div class="card">
                             <h3>LISP and Symbolic Processing</h3>
@@ -363,7 +401,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1959</span>
                         <div class="card">
                             <h3>Machine Learning and Self-Teaching Programs</h3>
@@ -376,7 +414,7 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1959</span>
                         <div class="card">
                             <h3>Physical Symbol System Hypothesis</h3>
@@ -397,20 +435,7 @@
             <div class="timeline-container">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
-                        <span class="date">1969</span>
-                        <div class="card">
-                            <h3>"Perceptrons" Book</h3>
-                            <p>Marvin Minsky and Seymour Papert published a rigorous mathematical analysis of the capabilities and limitations of single-layer perceptrons, proving they couldn't learn the XOR function due to linear separability constraints.</p>
-                            <p class="key-figures">Key Figures: Marvin Minsky, Seymour Papert</p>
-                            <p class="significance">Contributed to first AI winter by dampening enthusiasm for neural networks. While acknowledging multi-layer networks could overcome these limitations, the book expressed skepticism about effective training methods, which weren't discovered until the 1980s.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1966-1973</span>
                         <div class="card">
                             <h3>Critical Reports</h3>
@@ -423,11 +448,25 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
+                        <span class="date">1969</span>
+                        <div class="card">
+                            <h3>"Perceptrons" Book</h3>
+                            <p>Marvin Minsky and Seymour Papert published a rigorous mathematical analysis of the capabilities and limitations of single-layer perceptrons, proving they couldn't learn the XOR function due to linear separability constraints.</p>
+                            <p class="key-figures">Key Figures: Marvin Minsky, Seymour Papert</p>
+                            <p class="significance">Contributed to first AI winter by dampening enthusiasm for neural networks. While acknowledging multi-layer networks could overcome these limitations, the book expressed skepticism about effective training methods, which weren't discovered until the 1980s.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
                         <span class="date">1970s-1980s</span>
                         <div class="card">
                             <h3>First AI Winter</h3>
                             <p>Period of reduced funding following unmet expectations and critical reports. DARPA shifted focus from general AI research to mission-oriented projects with clear military applications. This led to a significant contraction of the field and a shift toward more focused, practical approaches.</p>
+                            <p class="key-figures">Key Organizations: DARPA, Various research institutions</p>
                             <p class="significance">Served as a crucial reality check for the field, exposing limitations of early approaches and pruning unrealistic expectations. This cooling period allowed researchers to confront fundamental challenges in learning, scalability, and real-world complexity.</p>
                         </div>
                     </div>
@@ -435,20 +474,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
-                        <span class="date">1980s</span>
-                        <div class="card">
-                            <h3>Expert Systems</h3>
-                            <p>Programs using knowledge bases of human-expert rules for domain-specific problems. Notable systems included DENDRAL (molecular structure analysis), MYCIN (medical diagnosis), and XCON/R1 (computer configuration). These systems demonstrated commercial viability, particularly R1/XCON which saved Digital Equipment Corporation millions.</p>
-                            <p class="key-figures">Key Figures: Edward Feigenbaum, Bruce Buchanan, Joshua Lederberg (DENDRAL); Edward Shortliffe (MYCIN)</p>
-                            <p class="significance">Demonstrated practical business value for AI in specific domains, leading to an industry boom. However, limitations including the "knowledge acquisition bottleneck," brittleness in handling unexpected cases, and inability to learn from experience would eventually lead to disillusionment.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1980</span>
                         <div class="card">
                             <h3>Neocognitron</h3>
@@ -461,11 +487,25 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
+                        <span class="date">1980s</span>
+                        <div class="card">
+                            <h3>Expert Systems</h3>
+                            <p>Programs using knowledge bases of human-expert rules for domain-specific problems. Notable systems included DENDRAL (molecular structure analysis), MYCIN (medical diagnosis), and XCON/R1 (computer configuration). These systems demonstrated commercial viability, particularly R1/XCON which saved Digital Equipment Corporation millions.</p>
+                            <p class="key-figures">Key Figures: Edward Feigenbaum, Bruce Buchanan, Joshua Lederberg (DENDRAL); Edward Shortliffe (MYCIN)</p>
+                            <p class="significance">Demonstrated practical business value for AI in specific domains, leading to an industry boom. However, limitations including the "knowledge acquisition bottleneck," brittleness in handling unexpected cases, and inability to learn from experience would eventually lead to disillusionment.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
                         <span class="date">1987-1990s</span>
                         <div class="card">
                             <h3>Second AI Winter</h3>
                             <p>A second period of reduced funding and interest followed the collapse of the specialized AI hardware market (LISP machines) and growing disillusionment with expert systems. Japan's ambitious Fifth Generation Computer Systems project (1982-1992) failed to achieve its revolutionary goals despite significant investment.</p>
+                            <p class="key-figures">Key Organizations: Symbolics, ICOT (Japan)</p>
                             <p class="significance">Created opening for revival of connectionist approaches and statistical methods. The fall of symbolic AI's commercial dominance cleared space for the eventual revival of neural networks and machine learning paradigms.</p>
                         </div>
                     </div>
@@ -481,7 +521,7 @@
             <div class="timeline-container">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1986</span>
                         <div class="card">
                             <h3>Backpropagation and Deep Learning Foundations</h3>
@@ -494,7 +534,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1989/1998</span>
                         <div class="card">
                             <h3>LeNet-5</h3>
@@ -507,7 +547,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1995</span>
                         <div class="card">
                             <h3>Support Vector Machines</h3>
@@ -520,7 +560,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">1997</span>
                         <div class="card">
                             <h3>LSTM (Long Short-Term Memory)</h3>
@@ -533,7 +573,7 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                                        <div class="timeline-content">
+                    <div class="timeline-content">
                         <span class="date">2006</span>
                         <div class="card">
                             <h3>Deep Learning Revival</h3>
