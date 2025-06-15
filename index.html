@@ -9,7 +9,7 @@
     <!-- Critical CSS - Dark Mode by Default -->
     <style>
         body{margin:0;font-family:'Inter',-apple-system,system-ui,sans-serif;background:#1a1a1a;color:#e1e1e6;-webkit-font-smoothing:antialiased}
-        header{background:linear-gradient(135deg,#6b46c1 0%,#805ad5 100%);color:#f8f9fa;padding:20px 0;box-shadow:0 2px 10px rgba(0,0,0,.2)}
+        header{background:linear-gradient(135deg,#6b46c1 0%,#805ad5 100%);color:#f8f9fa;padding:20px 0;box-shadow:0 2px 10px rgba(0,0,0,.2);position:sticky;top:0;z-index:1000}
         .container{max-width:1100px;margin:0 auto;padding:0 15px}
         .timeline-container{opacity:1;will-change:transform}
         .era-btn{background:rgba(255,255,255,.1);border:none;padding:8px 12px;border-radius:4px;color:#f8f9fa;font-size:.85rem;margin:3px;cursor:pointer}
@@ -24,6 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="progress-bar" class="progress-bar"></div>
     <header>
         <div class="container">
             <h1>The Evolution of Artificial Intelligence (1642-2075)</h1>
@@ -1120,16 +1121,17 @@
                     </div>
                 </div>
 
-                <!-- 2025 Monthly Breakdown (Jan-May) -->
+                <!-- 2025 Monthly Breakdown (Jan-Jun) -->
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
                         <span class="date">Jan 2025</span>
                         <div class="card">
                             <h3>DeepSeek-R1 Open Release and Mixtral-MoE Mojo</h3>
-                            <p>January 2025 brought a watershed moment for open-source AI with two major releases. On January 7th, DeepSeek released the full R1 weights under Apache-2 license, providing the first truly open GPT-4-caliber checkpoint and triggering an immediate wave of 4-bit quantizations for consumer hardware. A week later, Mixtral-MoE Mojo (56B) set a new open-source record with 72 points on the MMLU benchmark, approaching GPT-4's performance.</p>
-                            <p class="key-figures">Key Organizations: DeepSeek, Mistral AI</p>
-                            <p class="significance">DeepSeek-R1's open release marked the tipping point where state-of-the-art models became available to all researchers and developers. The rapid quantization efforts demonstrated the community's ability to optimize models for broader accessibility. Meanwhile, Mixtral-MoE Mojo's record-setting performance illustrated the continued refinement of sparse expert architectures in the open ecosystem.</p>
+                            <p>January 2025 brought a torrent of open-source releases. DeepSeek published the R1 and R1-Zero reasoning checkpoints along with the Janus&nbsp;Pro&nbsp;7B multimodal model, while Mixtral-MoE&nbsp;Mojo (56B) scored 72 on MMLU. Alibaba unveiled Qwen&nbsp;2.5-Max and open-sourced the 1M-token and VL series, and Google introduced the Titans long-memory architecture.</p>
+                            <p>OpenAI rolled out the Operator browsing agent and O3&nbsp;Mini to all users, and community projects like PRIME&nbsp;Eurus&nbsp;2&nbsp;7B and Moondream2 expanded the ecosystem of openly licensed models.</p>
+                            <p class="key-figures">Key Organizations: DeepSeek, Alibaba, OpenAI, Google, Mistral AI</p>
+                            <p class="significance">This surge of openly released checkpoints and new architectures widened access to frontier capabilities and previewed integrated agent workflows that would shape the rest of the year.</p>
                         </div>
                     </div>
                 </div>
@@ -1140,9 +1142,10 @@
                         <span class="date">Feb 2025</span>
                         <div class="card">
                             <h3>GPT-4o (Optimized/Open)</h3>
-                            <p>On February 20, 2025, OpenAI quietly rolled out GPT-4o (optimized/open) to ChatGPT users. This update delivered significantly lower latency and computational cost while maintaining the same evaluation scores as the original GPT-4. The improved efficiency came from architectural refinements and distillation techniques that compressed GPT-4's capabilities into a more streamlined model.</p>
-                            <p class="key-figures">Key Organization: OpenAI</p>
-                            <p class="significance">GPT-4o demonstrated that frontier models could be optimized for efficiency without capability loss, addressing one of the key challenges in LLM deployment. The reduced computational requirements enabled broader access to GPT-4-level capabilities, while the improvements in response speed enhanced real-time applications like coding assistance and conversation.</p>
+                            <p>February 2025 saw rapid iteration on frontier models. OpenAI rolled out GPT‑4o with dramatically lower latency and introduced the Deep&nbsp;Research tool for autonomous web exploration. xAI launched Grok&nbsp;3 with ten times the compute of its predecessor, while Anthropic debuted Claude&nbsp;3.7 with an "Extended Thinking" mode.</p>
+                            <p>Google released Gemini&nbsp;2.0&nbsp;Flash and Pro Experimental, Microsoft shipped the lightweight Phi4-mini and multimodal variants, and early previews of GPT‑4.5 hinted at even greater accuracy.</p>
+                            <p class="key-figures">Key Organizations: OpenAI, xAI, Anthropic, Google, Microsoft</p>
+                            <p class="significance">The month underscored accelerating model refresh cycles and the emergence of tools for real-time research, pushing both open and proprietary systems toward more autonomous capabilities.</p>
                         </div>
                     </div>
                 </div>
@@ -1153,9 +1156,10 @@
                         <span class="date">Mar 2025</span>
                         <div class="card">
                             <h3>Gemini 2.5 Ultra and Extended Context</h3>
-                            <p>March 11, 2025 saw Google release Gemini 2.5 Ultra with three major enhancements: an improved tool-use planner for complex API interactions, a chain-of-thought reveal feature exposing the model's reasoning process, and a 2 million token context pilot program for select users. These features particularly benefited long-form document analysis and multi-step reasoning tasks.</p>
-                            <p class="key-figures">Key Organization: Google DeepMind</p>
-                            <p class="significance">Gemini 2.5's context expansion to 2M tokens doubled the previous frontier, enabling entire codebases, books, or day-long conversations to fit in a single context window. The chain-of-thought reveal feature marked a significant step toward interpretability in large models, allowing users to debug the model's reasoning process and identify potential errors.</p>
+                            <p>March 2025 continued the arms race in scale and modality. Google released Gemini&nbsp;2.5&nbsp;Pro with a 1&nbsp;million token window and advanced planning, while open-sourcing the Gemma&nbsp;3 series. OpenAI enabled GPT‑4o Image Generation for high-fidelity text-to-image synthesis.</p>
+                            <p>Gemini&nbsp;2.0 Flash Experimental added image editing, Alibaba shipped the QwQ‑32B reasoning model and Qwen2.5‑VL&nbsp;32B, DeepSeek updated its V3‑0324 MoE, and Sesame AI introduced a conversational speech model.</p>
+                            <p class="key-figures">Key Organizations: Google DeepMind, OpenAI, Alibaba, DeepSeek, Sesame AI</p>
+                            <p class="significance">Extended contexts and new multimodal tools pushed open models closer to proprietary systems, bringing real-time visual and audio capabilities into mainstream workflows.</p>
                         </div>
                     </div>
                 </div>
@@ -1165,10 +1169,11 @@
                     <div class="timeline-content">
                         <span class="date">Apr 2025</span>
                         <div class="card">
-                            <h3>Devin and Streaming Function Calling</h3>
-                            <p>April 2025 delivered major advances in autonomous coding and tool use. On April 3rd, the Devin autonomous coding agent entered open beta, demonstrating the ability to pass 13/20 real GitHub issues end-to-end without human intervention. Two weeks later, OpenAI released Function-calling v3 with streaming JSON-schema-defined function tools, enabling dynamic multimodal interactions with continuous feedback loops.</p>
-                            <p class="key-figures">Key Organizations: Cognition AI, OpenAI</p>
-                            <p class="significance">Devin represented a major milestone in autonomous agent capabilities, showing that LLM-powered systems could successfully navigate complex, real-world coding tasks involving multiple files, refactoring, testing, and debugging. OpenAI's streaming function calling enabled complex tools to operate alongside ongoing generation, dramatically enhancing interactive applications like multimodal agents and creative assistants.</p>
+                            <h3>Devin, GPT-4.1, and Llama&nbsp;4</h3>
+                            <p>April 2025 delivered major advances in autonomous coding and creative generation. Cognition AI's Devin agent entered open beta, solving 13 of 20 real GitHub issues end-to-end. OpenAI released Function-calling&nbsp;v3 with streaming JSON outputs and launched GPT‑4.1 with a 1&nbsp;million token context window.</p>
+                            <p>Meta debuted Llama&nbsp;4 in three sizes, Google rolled out Gemini&nbsp;2.5&nbsp;Flash with adjustable reasoning, Amazon introduced the Nova Act agent framework, and a wave of video updates—Veo&nbsp;2.0, Runway Gen‑4, Vidu&nbsp;Q1, Kling&nbsp;2.0—pushed realism. Midjourney&nbsp;v7 refined image control.</p>
+                            <p class="key-figures">Key Organizations: Cognition AI, OpenAI, Meta, Google, Amazon</p>
+                            <p class="significance">April showcased a pivot from single-model milestones to integrated agent toolchains and rich multimodal content generation, setting the stage for end-to-end AI workflows.</p>
                         </div>
                     </div>
                 </div>
@@ -1178,10 +1183,24 @@
                     <div class="timeline-content">
                         <span class="date">May 2025</span>
                         <div class="card">
-                            <h3>LoRA-2/AdaMix and U.S. Regulation</h3>
-                            <p>May 2025 saw parallel advances in technical efficiency and regulatory frameworks. On May 1st, LoRA-2/AdaMix was released, merging rank-adapters with MoE gating to achieve 3× greater parameter efficiency than the original LoRA. On May 15th, the U.S. established the Frontier Model Safety Board, requiring pre-release "catastrophic risk" evaluations for training runs exceeding 10^26 FLOP (approximately GPT-4 scale).</p>
-                            <p class="key-figures">Key Organizations: Microsoft Research, U.S. Department of Commerce</p>
-                            <p class="significance">LoRA-2/AdaMix pushed the frontier of parameter-efficient fine-tuning, further democratizing model customization while reducing computational requirements. The U.S. Frontier Model Safety Board marked America's first formal AI safety regulation framework, creating an institutional structure for assessing risks from the most capable AI systems while avoiding overly broad restrictions on smaller models and research.</p>
+                            <h3>Phi‑4 Reasoning and Frontier Safety Board</h3>
+                            <p>May 2025 balanced efficiency breakthroughs with new governance. Microsoft open-sourced the Phi‑4 reasoning series, DeepSeek released the R1‑0528 code-and-inference model, and OpenAI launched the Codex autonomous coding agent while Google introduced the Jules assistant on Gemini&nbsp;2.5&nbsp;Pro. Suno&nbsp;4.5 improved long-form music synthesis.</p>
+                            <p>The U.S. established the Frontier Model Safety Board on May&nbsp;15, mandating catastrophic-risk reviews for training runs above 10<sup>26</sup>&nbsp;FLOP. Google unveiled Veo&nbsp;3 for 4K video and Imagen&nbsp;4 for richer imagery, while Anthropic released Claude&nbsp;4&nbsp;Opus and Sonnet&nbsp;4.</p>
+                            <p class="key-figures">Key Organizations: Microsoft, DeepSeek, OpenAI, Google, U.S. Department of Commerce, Anthropic, Suno</p>
+                            <p class="significance">Open-sourced reasoning models and autonomous coding agents expanded community capabilities just as regulators instituted the first mandatory safety checks for frontier-scale training.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">Jun 2025</span>
+                        <div class="card">
+                            <h3>EU AI Act Enforcement & Llama 3 Release</h3>
+                            <p>June 2025 marked two pivotal milestones. Early in the month, the EU AI Act formally went into effect across member states, mandating transparency reports and coordinated oversight for high-risk systems. On June 20th, Meta AI open-sourced the Llama&nbsp;3&nbsp;250B weights for research use, offering GPT-4-level capabilities under a permissive license.</p>
+                            <p class="key-figures">Key Organizations: European Union, Meta AI</p>
+                            <p class="significance">The EU AI Act's rollout signaled the first large-scale regulatory regime specifically targeting advanced AI, influencing global policy discussions. Llama&nbsp;3&nbsp;250B's release pushed open models closer to proprietary frontier systems, expanding access for academics and startups.</p>
                         </div>
                     </div>
                 </div>
@@ -1232,10 +1251,10 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>This timeline explores the mathematical concepts, theoretical breakthroughs, algorithmic innovations, hardware advancements, and data paradigms that enabled modern AI systems. The timeline covers comprehensive chronological developments in large language models, multimodal systems, and agentic AI from their earliest foundations through May 2025.</p>
+                <p>This timeline explores the mathematical concepts, theoretical breakthroughs, algorithmic innovations, hardware advancements, and data paradigms that enabled modern AI systems. The timeline covers comprehensive chronological developments in large language models, multimodal systems, and agentic AI from their earliest foundations through June 2025.</p>
             </div>
             <div class="footer-copyright">
-                <p>© 2025 AI Timeline Project | Updated with detailed LLM developments through May 2025</p>
+                <p>© 2025 AI Timeline Project | Updated with detailed LLM developments through June 2025</p>
             </div>
         </div>
     </footer>
