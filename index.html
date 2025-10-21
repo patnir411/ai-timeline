@@ -38,7 +38,7 @@
                 <button class="era-btn" data-era="neural">Neural Nets (1986-2006)</button>
                 <button class="era-btn" data-era="data-hardware">Data/Hardware (1998-2015)</button>
                 <button class="era-btn" data-era="nlp">NLP (1990s-2014)</button>
-                <button class="era-btn" data-era="transformers">Transformers & LLMs (2017-2025)</button>
+                <button class="era-btn" data-era="transformers">Transformers & LLMs (2017-Oct 2025)</button>
             </div>
         </div>
     </header>
@@ -1087,9 +1087,9 @@
                         <span class="date">2024 (Q1)</span>
                         <div class="card">
                             <h3>Million-Token Context and Claude 3</h3>
-                            <p>Early 2024 focused on extending context capabilities. In January, DeepSeek-R1 demonstrated GPT-4-class reasoning trained with just 10,000 GPUs via RL-powered data curricula. February brought Google's Gemini 1.5 Pro with a groundbreaking 1 million token context window. In March, Anthropic released the Claude 3 family (Opus, Sonnet, Haiku) with 1M token context and the new "Claude 3-Care" red-team benchmark, while Direct Preference Optimization (DPO) emerged as a simpler RLHF alternative.</p>
-                            <p class="key-figures">Key Organizations: DeepSeek, Google, Anthropic, UC Berkeley</p>
-                            <p class="significance">Million-token contexts revolutionized LLM utility by enabling entire books, codebases, and conversations to be processed at once. The launch of multiple model families (Claude 3, forthcoming Gemini 2) established a pattern of tiered models balancing capability and cost. DPO and related techniques made alignment more mathematically principled and 5× more efficient, streamlining safety-oriented training.</p>
+                            <p>Early 2024 focused on extending context capabilities and multimodal breakthroughs. In February, OpenAI unveiled Sora preview, a text-to-video model generating high-definition videos up to one minute, and Google released Gemini 1.5 Pro with a groundbreaking 1 million token context window. In March, Anthropic released the Claude 3 family (Opus, Sonnet, Haiku) matching or exceeding GPT-4 performance with 200K token context windows. NVIDIA announced the Blackwell B200 GPU architecture, offering 4× the performance of H100 chips with 20 petaflops of AI compute per GPU.</p>
+                            <p class="key-figures">Key Organizations: OpenAI, Google, Anthropic, NVIDIA</p>
+                            <p class="significance">Million-token contexts revolutionized LLM utility by enabling entire books, codebases, and conversations to be processed at once. Claude 3 Opus became the first model to routinely outperform GPT-4 on benchmarks, intensifying competition. Blackwell's 30× performance improvement over H100 for LLM inference demonstrated that hardware advancement remained crucial for AI progress. Sora's video generation capabilities signaled the expansion of generative AI beyond text and images.</p>
                         </div>
                     </div>
                 </div>
@@ -1099,10 +1099,10 @@
                     <div class="timeline-content">
                         <span class="date">2024 (Q2)</span>
                         <div class="card">
-                            <h3>EU AI Act and Linear-Complexity Models</h3>
-                            <p>April 2024 saw two significant milestones: FlashAttention-2 kernels were merged into PyTorch 2.2, democratizing long-context training, while the EU AI Act received final approval, establishing tiered regulation for AI systems based on risk. In June, RT-2 (Robotics Transformer-2) demonstrated that web-scale vision-language pretraining could enable zero-shot manipulation on real robot arms. The Mamba architecture debuted as well, offering linear-time scaling and unbounded context through state space models.</p>
-                            <p class="key-figures">Key Organizations: European Parliament, Google Robotics, Albert Gu (Stanford)</p>
-                            <p class="significance">The EU AI Act became the world's first comprehensive AI regulation, mandating frontier model risk assessment, transparency requirements, and potentially watermarking. RT-2 showcased how foundation models could bridge the sim2real gap in robotics, while Mamba offered a compelling alternative to attention-based architectures with more favorable scaling properties for extremely long contexts.</p>
+                            <h3>GPT-4o, Claude 3.5, and the Multimodal Leap</h3>
+                            <p>Q2 2024 delivered breakthrough multimodal models. In April, the EU AI Act was formally approved, becoming the world's first comprehensive AI regulation, while Meta released Llama 3 (8B and 70B models). May brought OpenAI's GPT-4o ("omni"), a natively multimodal model processing text, images, and audio with 128K context and 88.7% on MMLU, alongside GPT-4o mini in July for cost-effective deployment. June saw Anthropic release Claude 3.5 Sonnet, outperforming GPT-4o on coding benchmarks and introducing Artifacts for interactive content generation.</p>
+                            <p class="key-figures">Key Organizations: OpenAI, Anthropic, Meta, European Parliament</p>
+                            <p class="significance">GPT-4o's native multimodality eliminated the need for separate encoders, enabling seamless cross-modal reasoning. Claude 3.5 Sonnet's superior coding performance (92% on HumanEval) established Anthropic as a leader in developer tools. Llama 3's open release continued Meta's strategy of democratizing AI through permissive licensing. The EU AI Act's risk-based framework created the first major regulatory precedent for foundation models, influencing global AI governance.</p>
                         </div>
                     </div>
                 </div>
@@ -1112,15 +1112,15 @@
                     <div class="timeline-content">
                         <span class="date">2024 (Q3-Q4)</span>
                         <div class="card">
-                            <h3>Gemini 2.0 and Open-Source Parity</h3>
-                            <p>The second half of 2024 saw expanded multimodal capabilities with Gemini 2.0 adding live audio/video streaming and "Show-Your-Work" chain-of-thought transparency. By December, open-source models like Mixtral-8×22B, WizardLM-2, and Nous-Hermes-2 pushed performance to GPT-4-turbo parity on MT-Bench, with the gap between commercial and open models narrowing dramatically.</p>
-                            <p class="key-figures">Key Organizations: Google DeepMind, Mistral AI, Various Open-Source Groups</p>
-                            <p class="significance">The rapid pace of open-source advancement demonstrated the innovation potential of distributed development. Live multimodal capabilities in flagship models enabled more natural human-AI interaction across modalities. By year's end, commercial advantages had shifted from raw capabilities to specialized features, reliability, and service integration rather than fundamental model quality.</p>
+                            <h3>Reasoning Models and the Year of AI Agents</h3>
+                            <p>The second half of 2024 marked the emergence of reasoning-focused models and agentic capabilities. In July, Meta released Llama 3.1 (405B parameters) with a 128K context window. September brought OpenAI's o1, the first production reasoning model using chain-of-thought before responding, achieving 89th percentile on Codeforces and PhD-level science problem-solving. October saw Anthropic update Claude 3.5 with "computer use" capabilities, enabling direct interaction with software interfaces, while Meta released Llama 3.2 with vision capabilities. In December, OpenAI publicly launched Sora Turbo for video generation, announced o3 (with record-breaking ARC-AGI performance), and DeepSeek released V3 (671B parameters) trained for just $5.5M, shocking the industry with its cost-efficiency. Meta closed the year with Llama 3.3 (70B), matching Llama 3.1 405B performance at a fraction of the size.</p>
+                            <p class="key-figures">Key Organizations: OpenAI, Meta, Anthropic, DeepSeek, Google DeepMind</p>
+                            <p class="significance">O1's reasoning capabilities represented a paradigm shift toward "slow thinking" models that deliberate before responding, achieving breakthrough performance on mathematics and coding. Claude's computer use and Devin's autonomous coding demonstrated practical agentic AI, moving beyond chatbots toward systems that can complete complex workflows. DeepSeek V3's $5.5M training cost (vs. hundreds of millions for Western models) proved that innovative architecture and efficiency could challenge compute-heavy scaling. The rapid iteration from Llama 3 to 3.3 showed Meta's commitment to open-source leadership. California Governor Newsom's veto of SB 1047 in September preserved a lighter regulatory touch in the U.S. compared to Europe.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- 2025 Monthly Breakdown (Jan-May) -->
+                <!-- 2025 Monthly Breakdown (Jan-Oct) -->
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
@@ -1139,10 +1139,10 @@
                     <div class="timeline-content">
                         <span class="date">Feb 2025</span>
                         <div class="card">
-                            <h3>GPT-4o (Optimized/Open)</h3>
-                            <p>On February 20, 2025, OpenAI quietly rolled out GPT-4o (optimized/open) to ChatGPT users. This update delivered significantly lower latency and computational cost while maintaining the same evaluation scores as the original GPT-4. The improved efficiency came from architectural refinements and distillation techniques that compressed GPT-4's capabilities into a more streamlined model.</p>
-                            <p class="key-figures">Key Organization: OpenAI</p>
-                            <p class="significance">GPT-4o demonstrated that frontier models could be optimized for efficiency without capability loss, addressing one of the key challenges in LLM deployment. The reduced computational requirements enabled broader access to GPT-4-level capabilities, while the improvements in response speed enhanced real-time applications like coding assistance and conversation.</p>
+                            <h3>Gemini 2.0 Pro and xAI's Grok 3</h3>
+                            <p>February 2025 saw major releases from Google and xAI. On February 5th, Google launched Gemini 2.0 Flash (generally available) and Gemini 2.0 Pro (experimental), their most advanced model yet with superior coding performance, 2 million token context window, and native integration with Google Search and code execution. Gemini 2.0 Pro introduced "Thinking Mode" for transparent reasoning visualization. Meanwhile, xAI released Grok 3, trained on the massive Colossus supercomputer with 200,000+ NVIDIA H100 GPUs, featuring real-time X/Twitter integration and competitive performance across benchmarks.</p>
+                            <p class="key-figures">Key Organizations: Google DeepMind, xAI</p>
+                            <p class="significance">Gemini 2.0's 2M token context and native tool integration demonstrated Google's strategy of tightly coupling AI with their ecosystem (Search, Workspace, Cloud). The "Thinking Mode" feature addressed growing demands for AI transparency and interpretability. Grok 3's training on 200K H100s showcased xAI's infrastructure investment, while its X platform integration created unique real-time information advantages. The simultaneous launch of multiple frontier models intensified competition and accelerated capability advancement.</p>
                         </div>
                     </div>
                 </div>
@@ -1152,10 +1152,10 @@
                     <div class="timeline-content">
                         <span class="date">Mar 2025</span>
                         <div class="card">
-                            <h3>Gemini 2.5 Ultra and Extended Context</h3>
-                            <p>March 11, 2025 saw Google release Gemini 2.5 Ultra with three major enhancements: an improved tool-use planner for complex API interactions, a chain-of-thought reveal feature exposing the model's reasoning process, and a 2 million token context pilot program for select users. These features particularly benefited long-form document analysis and multi-step reasoning tasks.</p>
-                            <p class="key-figures">Key Organization: Google DeepMind</p>
-                            <p class="significance">Gemini 2.5's context expansion to 2M tokens doubled the previous frontier, enabling entire codebases, books, or day-long conversations to fit in a single context window. The chain-of-thought reveal feature marked a significant step toward interpretability in large models, allowing users to debug the model's reasoning process and identify potential errors.</p>
+                            <h3>GPT-4o Image Generation and o3-mini Launch</h3>
+                            <p>March 2025 brought significant updates to OpenAI's model lineup. On March 25th, OpenAI released a native image generation model integrated directly into GPT-4o, replacing DALL-E 3 as the default image generator with improved quality and coherence. This same period saw the general public release of o3-mini, making reasoning-optimized models accessible to free ChatGPT users through the 'Reason' mode selector. The o3-mini model offered a balance between the deep reasoning of o3 and practical speed/cost efficiency.</p>
+                            <p class="key-figures">Key Organization: OpenAI</p>
+                            <p class="significance">Integrating native image generation into GPT-4o streamlined multimodal workflows, eliminating the need to switch between models for text and image tasks. The public availability of o3-mini democratized access to reasoning models, previously limited to paid subscribers. This marked a shift in OpenAI's strategy toward broader accessibility of advanced capabilities, while maintaining tiered offerings (o3-pro for Pro/Team users) for the most demanding use cases.</p>
                         </div>
                     </div>
                 </div>
@@ -1165,10 +1165,10 @@
                     <div class="timeline-content">
                         <span class="date">Apr 2025</span>
                         <div class="card">
-                            <h3>Devin and Streaming Function Calling</h3>
-                            <p>April 2025 delivered major advances in autonomous coding and tool use. On April 3rd, the Devin autonomous coding agent entered open beta, demonstrating the ability to pass 13/20 real GitHub issues end-to-end without human intervention. Two weeks later, OpenAI released Function-calling v3 with streaming JSON-schema-defined function tools, enabling dynamic multimodal interactions with continuous feedback loops.</p>
-                            <p class="key-figures">Key Organizations: Cognition AI, OpenAI</p>
-                            <p class="significance">Devin represented a major milestone in autonomous agent capabilities, showing that LLM-powered systems could successfully navigate complex, real-world coding tasks involving multiple files, refactoring, testing, and debugging. OpenAI's streaming function calling enabled complex tools to operate alongside ongoing generation, dramatically enhancing interactive applications like multimodal agents and creative assistants.</p>
+                            <h3>Llama 4, o4-mini, and Advanced Agents</h3>
+                            <p>April 2025 brought groundbreaking open-source and reasoning model releases. On April 5th, Meta released the Llama 4 family—the first open Llama models with mixture-of-experts architecture. Llama 4 Scout (17B active/109B total parameters) featured a revolutionary 10 million token context window, while Maverick (17B active/400B total) offered 1M context with 128 experts. Both were natively multimodal, processing text, images, and video. Mid-month, OpenAI released o4-mini (April 16th), optimized for fast, cost-efficient reasoning in math, coding, and visual tasks, making advanced reasoning accessible for production applications.</p>
+                            <p class="key-figures">Key Organizations: Meta, OpenAI</p>
+                            <p class="significance">Llama 4's 10 million token context shattered previous limits, enabling processing of entire codebases, books, or day-long conversations in a single context. The mixture-of-experts architecture demonstrated how sparse activation could achieve massive scale efficiently. As an open-weight release, Llama 4 democratized access to state-of-the-art multimodal AI. O4-mini's combination of reasoning depth and efficiency made it viable for latency-sensitive applications, expanding reasoning models beyond research into production systems.</p>
                         </div>
                     </div>
                 </div>
@@ -1178,10 +1178,75 @@
                     <div class="timeline-content">
                         <span class="date">May 2025</span>
                         <div class="card">
-                            <h3>LoRA-2/AdaMix and U.S. Regulation</h3>
-                            <p>May 2025 saw parallel advances in technical efficiency and regulatory frameworks. On May 1st, LoRA-2/AdaMix was released, merging rank-adapters with MoE gating to achieve 3× greater parameter efficiency than the original LoRA. On May 15th, the U.S. established the Frontier Model Safety Board, requiring pre-release "catastrophic risk" evaluations for training runs exceeding 10^26 FLOP (approximately GPT-4 scale).</p>
-                            <p class="key-figures">Key Organizations: Microsoft Research, U.S. Department of Commerce</p>
-                            <p class="significance">LoRA-2/AdaMix pushed the frontier of parameter-efficient fine-tuning, further democratizing model customization while reducing computational requirements. The U.S. Frontier Model Safety Board marked America's first formal AI safety regulation framework, creating an institutional structure for assessing risks from the most capable AI systems while avoiding overly broad restrictions on smaller models and research.</p>
+                            <h3>Claude 4 and Microsoft Build AI Agents</h3>
+                            <p>May 2025 delivered major platform advancements in AI capabilities and agent frameworks. Anthropic released Claude 4 (Opus 4 and Sonnet 4) with hybrid architecture supporting both instant responses and extended thinking modes, 200K token context, and groundbreaking tool use capabilities—including extended thinking with tool use and parallel tool execution. Claude 4 achieved 61.4% on the OSWorld benchmark for computer control tasks. At Microsoft Build (May 19th), Microsoft announced "the age of AI agents," unveiling frameworks for building the "open agentic web" with extensive multimodal agent capabilities integrated across Azure, Office, and development tools.</p>
+                            <p class="key-figures">Key Organizations: Anthropic, Microsoft</p>
+                            <p class="significance">Claude 4's extended thinking mode combined deliberate reasoning with real-time tool access, enabling complex multi-step workflows previously requiring human oversight. The computer control capabilities represented a leap toward autonomous AI systems that can navigate standard software interfaces. Microsoft's Build announcements signaled enterprise commitment to agent-based architectures, positioning agents as the next platform shift after mobile and cloud. The convergence of reasoning, tool use, and multimodality in Claude 4 demonstrated the emerging "full-stack" AI assistant paradigm.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">Jun 2025</span>
+                        <div class="card">
+                            <h3>Gemini 2.5 Flash and Pro General Availability</h3>
+                            <p>June 2025 marked Google's major Gemini refresh with general availability launches. Gemini 2.5 Flash became widely available via Vertex AI in early June, followed shortly by Gemini 2.5 Pro. Both models featured the full 1M token context window, with Pro offering enhanced "Deep Think" reasoning mode for complex problem-solving. The 2.5 series introduced multi-agent capabilities, where the model could spawn multiple reasoning agents in parallel to tackle different aspects of a problem—a first for publicly available models. Performance improvements included better multilingual support, enhanced visual reasoning, and tighter integration with Google Workspace.</p>
+                            <p class="key-figures">Key Organization: Google DeepMind</p>
+                            <p class="significance">Gemini 2.5's multi-agent architecture represented a novel approach to complex reasoning, differing from the sequential chain-of-thought in o1/o3 models. The parallel agent spawning enabled simultaneous exploration of multiple solution paths, particularly effective for ambiguous or multi-faceted problems. General availability of Deep Think mode brought advanced reasoning to enterprise customers through Vertex AI, positioning Google competitively in the reasoning model space. The tight Workspace integration created unique productivity use cases unavailable in standalone models.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">Jul 2025</span>
+                        <div class="card">
+                            <h3>Grok 4 and the Reasoning Wars</h3>
+                            <p>July 9, 2025 saw xAI unveil Grok 4, claimed as "the world's most powerful AI model." The release included both standard Grok 4 and Grok 4 Heavy for the most demanding tasks, with Grok 4 Heavy featuring extensive multi-step reasoning capabilities rivaling o3. Trained on an expanded Colossus supercomputer cluster, Grok 4 offered real-time access to X platform data, multimodal understanding, and a unique "Think" mode that exposed reasoning traces. The model achieved state-of-the-art performance on several coding and mathematics benchmarks, intensifying the "reasoning model wars" between OpenAI, Anthropic, Google, and xAI.</p>
+                            <p class="key-figures">Key Organization: xAI</p>
+                            <p class="significance">Grok 4's release demonstrated xAI's rapid progression from newcomer to frontier competitor in less than two years. The Heavy variant's reasoning depth positioned it alongside o3 and Claude 4 as premier "slow-thinking" models. Real-time X integration provided unique advantages for current events and trend analysis, differentiating Grok from competitors. The intense competition between four major reasoning model families (OpenAI's o-series, Claude 4, Gemini 2.5, Grok 4) drove rapid capability advancement and price competition, benefiting developers and enterprises.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">Aug 2025</span>
+                        <div class="card">
+                            <h3>GPT-5 and DeepSeek V3.1</h3>
+                            <p>August 2025 delivered two landmark releases. On August 7th, OpenAI launched GPT-5, unifying reasoning and multimodality in a single model with over 1.8 trillion parameters and up to 1 million token context window (400K via API). GPT-5 featured router-based architecture automatically switching between specialized sub-models based on task complexity, drastically reducing hallucinations and achieving new benchmarks in scientific reasoning, mathematics, and creative tasks. Mid-month, DeepSeek released V3.1 (August 21st) with hybrid thinking/non-thinking modes, surpassing V3 and R1 by over 40% on coding benchmarks like SWE-bench and Terminal-bench. Anthropic also launched a Claude Chrome extension enabling browser-based AI agent interactions.</p>
+                            <p class="key-figures">Key Organizations: OpenAI, DeepSeek, Anthropic</p>
+                            <p class="significance">GPT-5's trillion-parameter scale and router architecture represented the culmination of OpenAI's scaling strategy, achieving GPT-4's vision of a unified multimodal reasoning system. The router's dynamic model selection optimized for both quality and efficiency, automatically using simpler models for routine tasks and complex reasoning for hard problems. DeepSeek V3.1's continued advancement at a fraction of Western training costs challenged assumptions about necessary compute budgets, while the 40%+ coding improvement demonstrated rapid iteration capabilities. The Anthropic Chrome extension brought computer use directly to browsers, making AI agents more accessible for everyday tasks.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">Sep 2025</span>
+                        <div class="card">
+                            <h3>Sora 2, Claude Sonnet 4.5, and Video AI</h3>
+                            <p>September 2025 brought major multimodal advancements. On September 29th, Anthropic released Claude Sonnet 4.5, refining Claude 4's capabilities with improved efficiency and enhanced computer control, becoming the top performer on real-world agentic tasks. The same week, OpenAI launched Sora 2 with integrated audio generation (dialogue, sound effects, music), a new "Cameo" feature for AI video editing with user footage, and simultaneous iOS app release for mobile video creation. Sora 2 represented complete text-to-multimedia synthesis, generating synchronized video and audio from text prompts. Google and Meta announced competing video models for Q4 release.</p>
+                            <p class="key-figures">Key Organizations: OpenAI, Anthropic</p>
+                            <p class="significance">Claude Sonnet 4.5's refinements demonstrated Anthropic's iterative development philosophy, prioritizing practical performance over parameter count. Its leadership in agentic benchmarks validated the company's focus on tool use and computer control as key differentiators. Sora 2's audio integration eliminated the last major gap in AI-generated media, enabling end-to-end content creation from a single prompt. The Cameo feature's ability to seamlessly blend user footage with AI-generated content opened new creative possibilities while raising deepfake concerns. The announcement of competing video models from Google and Meta signaled that video AI was becoming the new frontier after text and image generation matured.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">Oct 2025</span>
+                        <div class="card">
+                            <h3>Claude Haiku 4.5 and the Agent Economy</h3>
+                            <p>October 15, 2025 saw Anthropic complete the Claude 4.5 family with Haiku 4.5, a highly efficient model optimized for speed and cost while maintaining strong reasoning capabilities. Haiku 4.5 was specifically designed for agentic workflows requiring rapid decision-making, achieving sub-second response times for most queries while handling tool use and computer control. The release coincided with broader industry focus on production-ready AI agents, with multiple companies announcing autonomous systems for customer service, coding assistance, and business process automation. Salesforce announced it would not hire software engineers in 2025, citing 30% productivity gains from AI agents—a watershed moment for AI's impact on employment.</p>
+                            <p class="key-figures">Key Organizations: Anthropic, Salesforce, Various Enterprise Companies</p>
+                            <p class="significance">Haiku 4.5's efficiency made agentic AI economically viable at scale, addressing the cost barrier that had limited production deployments. The model's sub-second latency enabled real-time interactive agents for customer-facing applications. Salesforce's hiring freeze announcement marked a turning point in AI's transition from productivity tool to workforce replacement, forcing urgent conversations about AI's economic impact. The emergence of a viable "agent economy" with multiple competing platforms (Claude, GPT, Gemini agents) and frameworks validated early predictions about AI evolution from chat interfaces to autonomous systems. By late October 2025, autonomous AI agents handling 30-40% of complex software tasks became the new normal in leading tech companies.</p>
                         </div>
                     </div>
                 </div>
@@ -1232,10 +1297,10 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>This timeline explores the mathematical concepts, theoretical breakthroughs, algorithmic innovations, hardware advancements, and data paradigms that enabled modern AI systems. The timeline covers comprehensive chronological developments in large language models, multimodal systems, and agentic AI from their earliest foundations through May 2025.</p>
+                <p>This timeline explores the mathematical concepts, theoretical breakthroughs, algorithmic innovations, hardware advancements, and data paradigms that enabled modern AI systems. The timeline covers comprehensive chronological developments in large language models, multimodal systems, and agentic AI from their earliest foundations through October 2025.</p>
             </div>
             <div class="footer-copyright">
-                <p>© 2025 AI Timeline Project | Updated with detailed LLM developments through May 2025</p>
+                <p>© 2025 AI Timeline Project | Updated with detailed LLM developments through October 2025</p>
             </div>
         </div>
     </footer>
