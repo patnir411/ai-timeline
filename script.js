@@ -1,19 +1,22 @@
-// Optimized AI Timeline JavaScript
+// Optimized AI Timeline JavaScript with Mobile Enhancements
 (function() {
   // Use requestIdleCallback for non-critical initialization
   const onReady = (callback) => {
     if (document.readyState !== 'loading') {
-      window.requestIdleCallback 
-        ? window.requestIdleCallback(callback) 
+      window.requestIdleCallback
+        ? window.requestIdleCallback(callback)
         : setTimeout(callback, 0);
     } else {
       document.addEventListener('DOMContentLoaded', () => {
-        window.requestIdleCallback 
-          ? window.requestIdleCallback(callback) 
+        window.requestIdleCallback
+          ? window.requestIdleCallback(callback)
           : setTimeout(callback, 0);
       });
     }
   };
+
+  // Check if mobile viewport
+  const isMobile = () => window.innerWidth <= 600;
   
   // Add function to hide any timeline-year elements that might still be visible
   document.addEventListener('DOMContentLoaded', () => {
@@ -182,5 +185,245 @@
     
     // Add passive: true to improve scroll performance
     window.addEventListener('scroll', () => {}, { passive: true });
+
+    // Mobile-specific enhancements
+    initMobileEnhancements();
   });
+
+  // Mobile enhancements function
+  function initMobileEnhancements() {
+    if (!isMobile()) {
+      // Add resize listener to initialize when viewport becomes mobile
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          if (isMobile() && !document.querySelector('.floating-nav-hub')) {
+            initMobileEnhancements();
+          }
+        }, 250);
+      });
+      return;
+    }
+
+    // 1. Create floating navigation hub
+    createFloatingNavHub();
+
+    // 2. Create sticky era indicator
+    createStickyEraIndicator();
+
+    // 3. Initialize progressive disclosure for cards
+    initProgressiveDisclosure();
+
+    // 4. Update scroll tracking
+    initScrollTracking();
+
+    // 5. Add smooth scroll for era navigation
+    enhanceEraNavigation();
+  }
+
+  function createFloatingNavHub() {
+    if (document.querySelector('.floating-nav-hub')) return;
+
+    const hub = document.createElement('div');
+    hub.className = 'floating-nav-hub';
+    hub.innerHTML = `
+      <button class="nav-hub-button" aria-label="Open navigation menu">
+        <span class="progress-ring"></span>
+        ☰
+      </button>
+      <div class="nav-hub-menu">
+        <button data-action="scroll-top">⬆️ Back to Top</button>
+        <div class="divider"></div>
+        <button data-era="foundations">📐 Foundations</button>
+        <button data-era="computation">💻 Computation</button>
+        <button data-era="early-ai">🤖 Early AI</button>
+        <button data-era="ai-winters">❄️ AI Winters</button>
+        <button data-era="neural">🧠 Neural Nets</button>
+        <button data-era="data-hardware">⚡ Data/Hardware</button>
+        <button data-era="nlp">💬 NLP</button>
+        <button data-era="transformers">🚀 Transformers</button>
+      </div>
+    `;
+
+    document.body.appendChild(hub);
+
+    // Toggle menu
+    const button = hub.querySelector('.nav-hub-button');
+    const menu = hub.querySelector('.nav-hub-menu');
+
+    button.addEventListener('click', (e) => {
+      e.stopPropagation();
+      menu.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!hub.contains(e.target)) {
+        menu.classList.remove('active');
+      }
+    });
+
+    // Handle menu actions
+    menu.addEventListener('click', (e) => {
+      const btn = e.target.closest('button');
+      if (!btn) return;
+
+      const action = btn.getAttribute('data-action');
+      const era = btn.getAttribute('data-era');
+
+      if (action === 'scroll-top') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (era) {
+        const section = document.getElementById(era);
+        if (section) {
+          const yOffset = -80;
+          const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }
+
+      menu.classList.remove('active');
+    });
+  }
+
+  function createStickyEraIndicator() {
+    if (document.querySelector('.sticky-era-indicator')) return;
+
+    const indicator = document.createElement('div');
+    indicator.className = 'sticky-era-indicator';
+    indicator.textContent = 'Loading...';
+    document.body.appendChild(indicator);
+  }
+
+  function initProgressiveDisclosure() {
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+      // Skip if already processed
+      if (card.querySelector('.card-expand-btn')) return;
+
+      // Extract first paragraph as summary
+      const paragraphs = card.querySelectorAll('p:not(.key-figures):not(.significance)');
+      if (paragraphs.length === 0) return;
+
+      const firstPara = paragraphs[0];
+      const summaryText = firstPara.textContent.substring(0, 150) + '...';
+
+      // Create summary element
+      const summary = document.createElement('div');
+      summary.className = 'card-summary';
+      summary.textContent = summaryText;
+
+      // Wrap existing content in details container
+      const details = document.createElement('div');
+      details.className = 'card-details';
+
+      // Move all paragraphs and key figures/significance into details
+      const contentToMove = Array.from(card.children).filter(child =>
+        child.tagName === 'P' || child.classList.contains('key-figures') || child.classList.contains('significance')
+      );
+
+      contentToMove.forEach(element => details.appendChild(element));
+
+      // Create expand button
+      const expandBtn = document.createElement('button');
+      expandBtn.className = 'card-expand-btn';
+      expandBtn.textContent = 'Read More';
+
+      // Add elements to card
+      card.appendChild(summary);
+      card.appendChild(details);
+      card.appendChild(expandBtn);
+
+      // Set initial collapsed state
+      card.classList.add('collapsed');
+
+      // Handle expand/collapse
+      expandBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        card.classList.toggle('collapsed');
+        expandBtn.textContent = card.classList.contains('collapsed') ? 'Read More' : 'Read Less';
+      });
+    });
+  }
+
+  function initScrollTracking() {
+    const eraSections = document.querySelectorAll('.era-section');
+    const indicator = document.querySelector('.sticky-era-indicator');
+    const progressRing = document.querySelector('.progress-ring');
+
+    if (!indicator) return;
+
+    let lastScrollTop = 0;
+    let ticking = false;
+
+    const updateIndicator = () => {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+
+      // Update progress ring rotation
+      if (progressRing) {
+        progressRing.style.transform = `rotate(${scrollPercent * 3.6}deg)`;
+      }
+
+      // Find current era
+      let currentEra = 'Timeline';
+      eraSections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 100 && rect.bottom >= 100) {
+          const title = section.querySelector('.era-title');
+          if (title) {
+            currentEra = title.textContent;
+          }
+        }
+      });
+
+      indicator.textContent = currentEra;
+
+      // Show/hide indicator based on scroll position
+      if (scrollTop > 200) {
+        indicator.classList.add('visible');
+      } else {
+        indicator.classList.remove('visible');
+      }
+
+      lastScrollTop = scrollTop;
+      ticking = false;
+    };
+
+    const requestTick = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateIndicator);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', requestTick, { passive: true });
+    updateIndicator(); // Initial call
+  }
+
+  function enhanceEraNavigation() {
+    const eraNav = document.querySelector('.era-nav');
+    if (!eraNav) return;
+
+    const buttons = eraNav.querySelectorAll('.era-btn');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Scroll active button into view in the horizontal scroller
+        setTimeout(() => {
+          const activeBtn = eraNav.querySelector('.era-btn.active');
+          if (activeBtn) {
+            activeBtn.scrollIntoView({
+              behavior: 'smooth',
+              inline: 'center',
+              block: 'nearest'
+            });
+          }
+        }, 100);
+      });
+    });
+  }
 })();
